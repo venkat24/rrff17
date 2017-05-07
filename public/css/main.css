@@ -3011,6 +3011,7 @@ footer h4.h05::after {
 .reel {
     width: 200px;
     height: 200px;
+    /*margin-right: 8vw;*/
     filter: invert(1);
     -webkit-animation: rotating 5s linear infinite;
        -moz-animation: rotating 5s linear infinite;
@@ -3020,14 +3021,23 @@ footer h4.h05::after {
 .reel2 {
     width: 200px;
     height: 200px;
-    position: absolute;
-    left: 55%;
+    left: 63vh;
     filter: invert(1);
-    -webkit-animation: rotating 5s linear infinite;
-       -moz-animation: rotating 5s linear infinite;
-        -ms-animation: rotating 5s linear infinite;
-         -o-animation: rotating 5s linear infinite;
+    margin-left: -85px;
 }
 .rolling-font {
     font-family: "cabin-regular";
+}
+.profile-img {
+    width:  140px;
+    height: 140px;
+}
+.profile-container {
+    display: inline-block;
+    text-align : center;
+    margin: 20px;
+}
+.contact-content {
+    width: 100%;
+    text-align: center;
 }
