@@ -18,6 +18,7 @@ Route::get('/', function () {
 // Submission Routes
 Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
 Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
+Route::post('/api/uploadposter','SubmissionsController@setPoster');
 
 // Authentication Routes
 Route::post('/api/login','AuthController@authenticateUser');

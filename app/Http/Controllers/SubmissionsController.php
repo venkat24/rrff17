@@ -8,8 +8,9 @@ use Log;
 use Session;
 use Validator;
 use Exception;
-use App\Http\Requests;
+use Carbon\Carbon;
 use App\Models\User;
+use App\Http\Requests;
 use App\Models\Submission;
 use Sangria\JSONResponse;
 use App\Http\Controllers\Controller;
@@ -69,5 +70,35 @@ class SubmissionsController extends Controller
             Log::error($e->getMessage()." ".$e->getLine());
             return JSONResponse::response(500, $e->getMessage());
         }
+    }
+
+    public function setPoster(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'poster' => 'required'
+        ]);
+        if($validator->fails()) {
+            $message = $validator->errors()->all();
+            Log::info($validator->errors()->all());
+            return JSONResponse::response(200,'Submission Failed. Please Try Again. Ensure the filesize of the image is less than 3Mb.');
+        }
+
+        $user_email = Session::get('user_email');
+        $user_id    = User::where('email','=',$user_email)->first();
+
+        $image     = $request->file('poster');
+        $extension = $image->getClientOriginalExtension();
+
+        $filename = $user_email.'_'.Carbon::now().'.'.$extension;
+        $filename = str_replace(' ','',$filename);
+
+        Submission::where('user_id','=',$user_id)
+                  ->update([
+                      'poster_submitted' => 1,
+                      'poster_path' => $filename,
+                  ]);
+
+        $image->move(storage_path('posters'), $filename);
+
+        return 'Submitted Successfully';
     }
 }
