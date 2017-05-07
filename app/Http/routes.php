@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Submission Routes
+Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
+Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
