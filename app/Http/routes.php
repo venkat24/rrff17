@@ -22,3 +22,6 @@ Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
 // Authentication Routes
 Route::post('/api/login','AuthController@authenticateUser');
 Route::post('/api/logout','AuthController@logoutUser');
+
+// Registration Routes
+Route::post('/api/register','RegistrationController@registerUser');
