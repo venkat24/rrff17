@@ -15,12 +15,13 @@ class CreateSubmissionsTable extends Migration
         Schema::create('submissions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id');
-            $table->tinyInteger('poster_submitted');
-            $table->string('poster_path');
-            $table->text('synopsis');
-            $table->tinyInteger('movie_submitted');
-            $table->string('submission_method');
-            $table->rememberToken();
+            $table->tinyInteger('poster_submitted')->default(0);
+            $table->string('poster_path')->nullable();
+            $table->text('synopsis')->nullable();
+            $table->tinyInteger('synopsis_submitted')->default(0);
+            $table->tinyInteger('movie_submitted')->default(0);
+            $table->string('submission_method')->nullable();
+            $table->tinyInteger('payment_submitted')->default(0);
             $table->timestamps();
         });
     }
