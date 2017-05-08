@@ -8,9 +8,11 @@ use Log;
 use Session;
 use Exception;
 use Validator;
+use App\Models\User;
 use App\Models\Admin;
 use App\Http\Requests;
 use Sangria\JSONResponse;
+use App\Models\Submission;
 use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
@@ -53,6 +55,16 @@ class AdminController extends Controller
             $status_code = 500;
             $response = $e->getMessage()." ".$e->getLine();
             return JSONResponse::response($status_code,$response);
+        }
+    }
+
+    public function adminMainView(Request $request) {
+        try {
+            $submissions = Submission::get();
+            return view('admin.home',['submissions' => $submissions]);
+        } catch (Exception $e) {
+            $response = $e->getMessage()." ".$e->getLine();
+            return $response;
         }
     }
 }

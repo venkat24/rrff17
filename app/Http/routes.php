@@ -19,6 +19,8 @@ Route::get('/admin', function () {
     return view('admin.login');
 });
 
+Route::get('/admin/home','AdminController@adminMainView');
+
 Route::group(['middleware' => 'setResponseHeaders'], function() {
     // Submission Routes
     Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
