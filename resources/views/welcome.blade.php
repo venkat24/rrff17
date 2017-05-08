@@ -52,7 +52,7 @@
 
 			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
 
-	   	<h3>Infinity.</h3>  
+	   	<h3>Rolling Reels</h3>  
 
 			<ul class="nav-list">
 				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
@@ -115,11 +115,11 @@
 				  			<div class="more animate-intro">
 				  				<a class="smoothscroll button stroke" href="#about">
 				  					Learn More
-				  				</a>&nbsp&nbsp&nbsp&nbsp
+				  				</a>
 				  				<a class="smoothscroll button stroke" href="/register">
                                     Register Now
 				  				</a>
-				  			</div>							
+				  			</div>	
 
 			  		</div> <!-- end col-twelve --> 
 		   	</div> <!-- end row --> 
@@ -165,8 +165,9 @@
 
 				<div class="intro">
 					<h3 class="animate-this">About Us</h3>
+                <img src="images/RRFF.jpeg" width="300px">
 	   			<p class="lead animate-this">Rolling Reels is an annual Film Festival organized by Festember, the cultural Fest of NIT Trichy</p>	
-				</div>   
+				</div>
 
    		</div> <!-- end col-full  -->
    	</div> <!-- end about-wrap  -->
@@ -516,10 +517,10 @@
 
    	<div class="row contact-content">
     
-        <div class="profile-container"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
-        <div class="profile-container"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
-        <div class="profile-container"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
-        <div class="profile-container"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
+        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
+        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
+        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
+        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
 
    	</div> <!-- end row contact-content -->
 		
@@ -605,7 +606,9 @@
    </footer>
 
    <div id="preloader"> 
-    	<div id="loader"></div>
+        <div id="loader-container">
+            <img id="loader" src="images/reel.png">
+        </div>
    </div> 
 
    <!-- Java Script

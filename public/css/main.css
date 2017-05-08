@@ -502,19 +502,25 @@ td:last-child {
   display: none;
 }
 
+#loader-container {
+    position: absolute;
+    left: 47.4%;
+    top: 23%;
+}
+
 #loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 60px;
-  height: 60px;
-  margin-left: -30px;
-  margin-top: -30px;
+  position: relative;
+  left: -50%;
+  top:  -50%;
+  width: 150px;
+  height: 150px;
+  filter: invert(1);
+  opacity: 0.2;
   padding: 0;
-  background-color: #f9a828;
-  border-radius: 100%;
-  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-  animation: sk-scaleout 1.0s infinite ease-in-out;
+  -webkit-animation: rotating 5s infinite linear;
+     -moz-animation: rotating 5s infinite linear;
+      -ms-animation: rotating 5s infinite linear;
+          animation: rotating 5s infinite linear;
 }
 
 @-webkit-keyframes rotating {
@@ -3009,8 +3015,8 @@ footer h4.h05::after {
 /* Reel Animations */
 
 .reel {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     /*margin-right: 8vw;*/
     filter: invert(1);
     -webkit-animation: rotating 5s linear infinite;
@@ -3019,11 +3025,11 @@ footer h4.h05::after {
          -o-animation: rotating 5s linear infinite;
 }
 .reel2 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     left: 63vh;
     filter: invert(1);
-    margin-left: -85px;
+    margin-left: -65px;
 }
 .rolling-font {
     font-family: "cabin-regular";
