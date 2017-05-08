@@ -15,14 +15,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Submission Routes
-Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
-Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
-Route::post('/api/uploadposter','SubmissionsController@setPoster');
+Route::get('/admin', function () {
+    return view('admin.login');
+});
 
-// Authentication Routes
-Route::post('/api/login','AuthController@authenticateUser');
-Route::post('/api/logout','AuthController@logoutUser');
+Route::group(['middleware' => 'setResponseHeaders'], function() {
+    // Submission Routes
+    Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
+    Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
+    Route::post('/api/uploadposter','SubmissionsController@setPoster');
 
-// Registration Routes
-Route::post('/api/register','RegistrationController@registerUser');
+    // Authentication Routes
+    Route::post('/api/login','AuthController@authenticateUser');
+    Route::post('/api/logout','AuthController@logoutUser');
+
+    // Registration Routes
+    Route::post('/api/register','RegistrationController@registerUser');
+
+    // Admin Routes
+    Route::post('/admin/login','AdminController@adminLogin');
+    Route::post('/admin/logout','AdminController@adminLogout');
+});
