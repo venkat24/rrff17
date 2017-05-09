@@ -22,6 +22,7 @@ class RegistrationController extends Controller
                 'email'              => 'required|string',
                 'password'           => 'required|string',
                 'confirm_password'   => 'required|string',
+                'g-recaptcha-response' => 'required|recaptcha',
             ]);
             //  Add more fields here based on requirements
             if($validator->fails()) {
