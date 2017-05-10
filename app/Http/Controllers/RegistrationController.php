@@ -18,17 +18,17 @@ class RegistrationController extends Controller
     public function registerUser(Request $request) {
         try {
             $validator = Validator::make($request->all(), [
-                'name'               => 'required|string',
-                'email'              => 'required|string',
-                'password'           => 'required|string',
-                'confirm_password'   => 'required|string',
+                'name'                 => 'required|string',
+                'email'                => 'required|string',
+                'password'             => 'required|string',
+                'confirm_password'     => 'required|string',
                 'g-recaptcha-response' => 'required|recaptcha',
             ]);
             //  Add more fields here based on requirements
             if($validator->fails()) {
                 $message = $validator->errors()->all();
                 Log::error($message);
-                return JSONResponse::response(400,'Invalid Parameters');
+                return JSONResponse::response(400, $message);
             }
             if($request->input('password') !== $request->input('confirm_password')) {
                 return JSONResponse::response(400, "Passwords do not match");
