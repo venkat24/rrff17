@@ -55,18 +55,13 @@
 	   	<h3>Rolling Reels</h3>  
 
 			<ul class="nav-list">
-				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-				<li><a class="smoothscroll" href="#about" title="">About</a></li>
-				<li><a class="smoothscroll" href="#services" title="">Services</a></li>
-				<li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
-				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>						
+				<li><a href="/login" style="font-weight: bold; color: #aaaaaa;">Log In</a></li>
+				<li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+				<li><a class="smoothscroll" href="#about">About</a></li>
+				<li><a class="smoothscroll" href="#services">Services</a></li>
+				<li><a class="smoothscroll" href="#portfolio">Works</a></li>
+				<li><a class="smoothscroll" href="#contact">Contact</a></li>
 			</ul>	
-
-			<p class="sponsor-text">
-				Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
-				Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-				<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
-			</p>			
 
 			<ul class="header-social-list">
 	         <li>
@@ -116,7 +111,7 @@
 				  				<a class="smoothscroll button stroke" href="#about">
 				  					Learn More
 				  				</a>
-				  				<a class="smoothscroll button stroke" href="/register">
+				  				<a class="button stroke" href="/register">
                                     Register Now
 				  				</a>
 				  			</div>	
