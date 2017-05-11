@@ -14,7 +14,7 @@ class CreateSubmissionsTable extends Migration
     {
         Schema::create('submissions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_id');
+            $table->integer('user_id')->unsigned();
             $table->tinyInteger('poster_submitted')->default(0);
             $table->string('poster_path')->nullable();
             $table->text('synopsis')->nullable();
@@ -23,6 +23,7 @@ class CreateSubmissionsTable extends Migration
             $table->string('submission_method')->nullable();
             $table->tinyInteger('payment_submitted')->default(0);
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
