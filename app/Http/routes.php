@@ -15,26 +15,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::get('/login', function () {
+    return view('login');
 });
 
 Route::get('/admin', function () {
     return view('admin.login');
 });
 
-Route::get('/admin/home','AdminController@adminMainView');
+Route::group(['middleware' => 'checkSessionAdmin'], function() {
+    Route::get('/admin/home','AdminController@adminMainView');
+});
+
+Route::group(['middleware' => 'checkSession'], function() {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+});
 
 Route::group(['middleware' => 'setResponseHeaders'], function() {
-    // Submission Routes
-    Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
-    Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
-    Route::post('/api/uploadposter','SubmissionsController@setPoster');
-
     // Authentication Routes
     Route::post('/api/login','AuthController@authenticateUser');
     Route::post('/api/logout','AuthController@logoutUser');
@@ -45,4 +48,14 @@ Route::group(['middleware' => 'setResponseHeaders'], function() {
     // Admin Routes
     Route::post('/admin/login','AdminController@adminLogin');
     Route::post('/admin/logout','AdminController@adminLogout');
+});
+
+Route::group(['middleware' => 'checkSessionAdminJSON'], function() {
+});
+
+Route::group(['middleware' => 'checkSessionJSON'], function() {
+    // Submission Routes
+    Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
+    Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
+    Route::post('/api/uploadposter','SubmissionsController@setPoster');
 });

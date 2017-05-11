@@ -30,5 +30,9 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'setResponseHeaders' => \App\Http\Middleware\SetResponseHeaders::class,
+        'checkSession' => \App\Http\Middleware\SessionCheck::class,
+        'checkSessionJSON' => \App\Http\Middleware\SessionCheckJSON::class,
+        'checkSessionAdmin' => \App\Http\Middleware\SessionCheckAdmin::class,
+        'checkSessionJSONAdmin' => \App\Http\Middleware\SessionCheckJSONAdmin::class,
     ];
 }
