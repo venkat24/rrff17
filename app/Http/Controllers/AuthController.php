@@ -24,6 +24,7 @@ class AuthController extends Controller
 
             if($validator->fails()) {
                 $response = "Invalid Parameters";
+                Session::flush();
                 return JSONResponse::response(400,$response);
             }
 
@@ -46,8 +47,10 @@ class AuthController extends Controller
                 $status_code = 401;
                 $response = "Not a registered user";
             }     
+            Session::flush();
             return JSONResponse::response($status_code, $response);             
         } catch (Exception $e) {
+            Session::flush();
             Log::error($e->getMessage()." ".$e->getLine());
             return JSONResponse::response(500, $e->getMessage());
         }

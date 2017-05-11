@@ -50,10 +50,10 @@ Route::group(['middleware' => 'setResponseHeaders'], function() {
     Route::post('/admin/logout','AdminController@adminLogout');
 });
 
-Route::group(['middleware' => 'checkSessionAdminJSON'], function() {
+Route::group(['middleware' => ['checkSessionAdminJSON','setResponseHeaders']], function() {
 });
 
-Route::group(['middleware' => 'checkSessionJSON'], function() {
+Route::group(['middleware' => ['checkSessionJSON','setResponseHeaders']], function() {
     // Submission Routes
     Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
     Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');

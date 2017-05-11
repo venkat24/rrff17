@@ -26,7 +26,7 @@ class SessionCheck
             $message = "Session expired. Please login again.";
             Log::info('Logged out');
             Session::flush();
-            return redirect('/admin/login');
+            return redirect('/admin');
         }
     }
 }
