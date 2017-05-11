@@ -26,8 +26,7 @@ class SubmissionsController extends Controller
      */
     public function getCurrentStatus(Request $request) {
         try {
-            //$user_email = Session::get('user_email');
-            $user_email = "venkat24@outlook.com";
+            $user_email = Session::get('user_email');
             $user_id    = User::where('email','=',$user_email)->first();
             if(!$user_id->count()) {
                 return JSONResponse::response(400,"User does not exist");
@@ -59,8 +58,7 @@ class SubmissionsController extends Controller
                 return JSONResponse::response(400, $message);
             }
 
-            //$user_email = Session::get('user_email');
-            $user_email = "venkat24@outlook.com";
+            $user_email = Session::get('user_email');
             $user_id    = User::where('email','=',$user_email)->first();
 
             Submission::where('user_id','=',$user_id->id)
@@ -87,8 +85,7 @@ class SubmissionsController extends Controller
             return JSONResponse::response(200,'Submission Failed. Please Try Again. Ensure the filesize of the image is less than 3Mb.');
         }
 
-        //$user_email = Session::get('user_email');
-        $user_email = "venkat24@outlook.com";
+        $user_email = Session::get('user_email');
         $user_id    = User::where('email','=',$user_email)->first();
 
         $image     = $request->file('poster');
