@@ -94,12 +94,11 @@
 
    	<div class="home-content-table">	
 		   <div class="home-content-tablecell">
-		   	<div class="row">
+		   	<div class="row" style="margin-top: 70px">
 		   		<div class="col-twelve">		   			
 			  		
                             <div>
-                                    <img class="reel" src="images/reel.png" width="200px" height="200px">
-                                    <img class="reel2" src="images/reel2.png" width="200px" height="200px">
+                                    <!--<img class="reel" src="images/reel.png" width="200px" height="200px" id="main-reel">-->
                             </div>
                             <br>
 			  				<h3 class="rolling-font animate-intro">Festember Presents</h3>
@@ -608,13 +607,14 @@
    </footer>
 
    <div id="preloader"> 
-        <div id="loader-container">
-            <img id="loader" src="images/reel.png">
-        </div>
    </div> 
+   <div id="preloader-img-container">
+      <img id="loader" src="images/reel.png">
+   </div>
+   <!--<img class="reel2" src="images/reel2.png">-->
 
    <!-- Java Script
-   ================================================== --> 
+   ================================================== -->
    <script src="js/jquery-2.1.3.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>

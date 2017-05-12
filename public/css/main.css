@@ -502,14 +502,24 @@ td:last-child {
   display: none;
 }
 
-#loader-container {
+#preloader-img-container {
     position: absolute;
-    left: 47.4%;
-    top: 23%;
+    left: 50%;
+    top: 30%;
+}
+
+.reel2 {
+    transition: all 0.5s ease-in-out;
+    width: 150px;
+    height: 150px;
+    filter: invert(1);
+    margin-left: -142px;
 }
 
 #loader {
+  transition: all 1s ease-in-out; 
   position: relative;
+  z-index:20000;
   left: -50%;
   top:  -50%;
   width: 150px;
@@ -2561,6 +2571,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   color: #FFFFFF;
   z-index: 600;
   position: relative;
+  color: #AAAAAA;
 }
 .contact-content h5 {
   color: #FFFFFF;
@@ -3023,13 +3034,6 @@ footer h4.h05::after {
        -moz-animation: rotating 5s linear infinite;
         -ms-animation: rotating 5s linear infinite;
          -o-animation: rotating 5s linear infinite;
-}
-.reel2 {
-    width: 150px;
-    height: 150px;
-    left: 63vh;
-    filter: invert(1);
-    margin-left: -65px;
 }
 .rolling-font {
     font-family: "cabin-regular";
