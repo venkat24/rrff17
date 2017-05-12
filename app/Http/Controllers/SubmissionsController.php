@@ -45,6 +45,37 @@ class SubmissionsController extends Controller
     }
 
     /**
+     * Function to set the title of a submission
+     */
+    public function setTitle(Request $request) {
+        try {
+            $validator = Validator::make($request->all(), [
+                'title' => 'required|string'
+            ]);
+
+            if($validator->fails()) {
+                $message = "Invalid parameters";
+                return JSONResponse::response(400, $message);
+            }
+
+            $user_email = Session::get('user_email');
+            $user_id    = User::where('email','=',$user_email)->first();
+
+            Submission::where('user_id','=',$user_id->id)
+                ->update([
+                    'title' => $request->input('title'),
+                    'title_submitted' => 1
+                ]);
+
+            return JSONResponse::response(200, "Title set successfully");
+
+        } catch (Exception $e) {
+            Log::error($e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500, $e->getMessage());
+        }
+    }
+
+    /**
      * Function to set the synopsis of a submission
      */
     public function setSynopsis(Request $request) {

@@ -19,6 +19,8 @@ class CreateSubmissionsTable extends Migration
             $table->string('poster_path')->nullable();
             $table->text('synopsis')->nullable();
             $table->tinyInteger('synopsis_submitted')->default(0);
+            $table->text('title')->nullable();
+            $table->tinyInteger('title_submitted')->default(0);
             $table->tinyInteger('movie_submitted')->default(0);
             $table->string('submission_method')->nullable();
             $table->tinyInteger('payment_submitted')->default(0);

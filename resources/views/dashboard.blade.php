@@ -78,12 +78,16 @@
                 <table>
                         <tbody>
                            <tr>
-                              <td>Poster</td>
-                              <td id="poster_submitted" style="font-size: 20pt"></td>					    
+                              <td>Title</td>
+                              <td id="title_submitted" style="font-size: 20pt"></td>			    
                            </tr>
                            <tr>
                               <td>Synopsis</td>
                               <td id="synopsis_submitted" style="font-size: 20pt"></td>			    
+                           </tr>
+                           <tr>
+                              <td>Poster</td>
+                              <td id="poster_submitted" style="font-size: 20pt"></td>					    
                            </tr>
                            <tr>
                               <td>Registration Fee</td>
@@ -100,7 +104,35 @@
 
           </div>
 
+        <hr>
+
         <div class="col-twelve tab-full">
+
+            <br><br>
+
+            <h2>Submit Title</h2>
+
+            <p class="lead">Enter your movie's title here. Limit - 10000 Characters</p>
+            <form action="/api/settitle" method="POST">
+                <input type=text name="title" id="title" class="full-width" placehoder="Title">
+                <br>
+                <input class="button-primary" type="submit" value="Set Title">
+            </form>
+
+            <hr>
+
+            <br><br>
+
+            <h2>Submit Synopsis</h2>
+
+            <p class="lead">Enter your movie's synopsis here. Limit - 10000 Characters</p>
+            <form action="/api/setsynopsis" method="POST">
+                <textarea name="synopsis" id="synopsis" class="full-width" placehoder="Synopsis"></textarea>
+                <br>
+                <input class="button-primary" type="submit" value="Set Synopsis">
+            </form>
+
+            <hr>
 
             <br><br>
 
@@ -119,16 +151,6 @@
 
         <div class="col-twelve tab-full">
 
-            <br><br>
-
-            <h2>Submit Synopsis</h2>
-
-            <p class="lead">Enter your movie's synopsis here. Limit - 10000 Characters</p>
-            <form action="/api/setsynopsis" method="POST">
-                <textarea name="synopsis" id="synopsis" class="full-width" placehoder="Synopsis"></textarea>
-                <br>
-                <input class="button-primary" type="submit" value="Set Synopsis">
-            </form>
 
         </div>
 

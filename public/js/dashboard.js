@@ -35,7 +35,9 @@ function getSubmissionStatus() {
             setMark('synopsis_submitted',data.message);
             setMark('payment_submitted',data.message);
             setMark('movie_submitted',data.message);
+            setMark('title_submitted',data.message);
             $('#synopsis').val(data.message.synopsis);
+            $('#title').val(data.message.title);
 		} else {
 			alert('Fetch Failed');
             console.log(data.message);
