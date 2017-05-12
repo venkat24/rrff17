@@ -214,6 +214,10 @@
                         <input class="full-width" type="email" id="email" name="email">
                   </div>
                   <div>
+                        <label for="email">Phone Number</label>
+                        <input class="full-width" type="text" id="phone" name="phone">
+                  </div>
+                  <div>
                         <label for="password">Password</label>
                         <input class="full-width" type="password" id="password" name="password">
                   </div>

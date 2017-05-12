@@ -9,6 +9,7 @@ use Validator;
 use Exception;
 use Session;
 use App\Models\User;
+use App\Models\Submission;
 use App\Http\Requests;
 use Sangria\JSONResponse;
 use App\Http\Controllers\Controller;
@@ -20,6 +21,7 @@ class RegistrationController extends Controller
             $validator = Validator::make($request->all(), [
                 'name'                 => 'required|string',
                 'email'                => 'required|string',
+                'phone'                => 'required|string',
                 'password'             => 'required|string',
                 'confirm_password'     => 'required|string',
                 'g-recaptcha-response' => 'required|recaptcha',
@@ -40,10 +42,13 @@ class RegistrationController extends Controller
                 return JSONResponse::response(400, $message);
             }
 
-            User::insert([
+            $user_insert = User::insertGetId([
                 'email'    => $request->input('email'),
                 'name'     => $request->input('name'),
                 'password' => sha1($request->input('password')),
+            ]);
+            Submission::insert([
+                'user_id' => $user_insert,
             ]);
             return JSONResponse::response(200, "Registration Successful");
 
