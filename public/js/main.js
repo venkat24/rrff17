@@ -37,6 +37,9 @@
 	        // will fade out the whole DIV that covers the website.
 	        $("#preloader").delay(300).fadeOut("slow");
             $('#loader').css('opacity','1');
+            $('#loader').animate({
+                animationDuration: '3s',
+            });
             $('#preloader-img-container').animate({
                 left: '46.7%',
                 top :'16%',
@@ -45,8 +48,8 @@
             setTimeout(function() {
                 $('.reel2').animate({
                     opacity: '1'
-                },500);
-            },2000);
+                },600);
+            },1600);
 
 		  //}); 
 	  	});

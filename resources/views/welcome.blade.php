@@ -101,8 +101,8 @@
                                     <!--<img class="reel" src="images/reel.png" width="200px" height="200px" id="main-reel">-->
                             </div>
                             <br>
-			  				<h3 class="rolling-font animate-intro">Festember Presents</h3>
-				  			<h1 class="rolling-font animate-intro">
+			  				<h3 class="rolling-font animate-intro"><span class="festember-main">Festember</span> Presents</h3>
+				  			<h1 class="rolling-font animate-intro main-heading">
 							Rolling Reels <br>
 				  			</h1>	
 
@@ -158,8 +158,8 @@
    			<div class="about-profile-bg"></div>
 
 				<div class="intro">
-					<h3 class="animate-this">About Us</h3>
-                <img src="images/RRFF.jpeg" width="300px">
+					<h3 class="animate-this">About</h3>
+                <img src="images/rrff.png" width="500px">
 	   			<p class="lead animate-this">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>	
 				</div>
 
@@ -609,9 +609,8 @@
    <div id="preloader"> 
    </div> 
    <div id="preloader-img-container">
-      <img id="loader" src="images/reel.png">
+      <img id="loader" class="animate-reel" src="images/reel.png">
    </div>
-   <!--<img class="reel2" src="images/reel2.png">-->
 
    <!-- Java Script
    ================================================== -->
