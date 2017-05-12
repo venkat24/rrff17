@@ -512,10 +512,36 @@
 
    	<div class="row contact-content">
     
-        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
-        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
-        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
-        <div class="profile-container animate-this"><img src="images/profile.png" class="profile-img"><p>Deepan Thiruppathy</p></div>
+        <div class="profile-container animate-this"><img src="images/avatars/Deepan_Thiruppathy.jpg" class="profile-img">
+	        <br /><strong>Deepan Thiruppathy</strong>
+	        <br />Head, RRFF 2017
+	        <br />for Event queries
+        </div>
+
+        <div class="profile-container animate-this"><img src="images/avatars/Hanisha_Rajan.jpg" class="profile-img">
+	        <br /><strong>Hanisha Rajan</strong>
+	        <br />Head, RRFF 2017
+	        <br />for Workshop queries
+        </div>
+
+        <div class="profile-container animate-this"><img src="images/avatars/Varshini_Bhaskar.jpg" class="profile-img">
+	        <br /><strong>Varshini Bhaskar</strong>
+	        <br />Media Head, Festember 2017
+	        <br />for Media collaborations
+        </div>
+
+        <div class="profile-container animate-this"><img src="images/avatars/Shriya_Narayanan.jpg" class="profile-img">
+	        <br /><strong>Shriya Narayanan</strong>
+	        <br />Marketing Head, Festember 2017
+	        <br />for Sponsorship queries
+        </div>
+
+        <div class="profile-container animate-this"><img src="images/avatars/Aakash_Bhatt.jpg" class="profile-img">
+	        <br /><strong>Aakash Bhatt</strong>
+	        <br />Marketing Head, Festember 2017
+	        <br />for Branding queries
+        </div>
+
 
    	</div> <!-- end row contact-content -->
 		
