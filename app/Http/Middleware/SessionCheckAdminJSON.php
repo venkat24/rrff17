@@ -7,7 +7,7 @@ use Session;
 use Log;
 use Sangria\JSONResponse;
 
-class SessionCheckJSON
+class SessionCheckAdminJSON
 {
     /**
      * Handle an incoming request.
