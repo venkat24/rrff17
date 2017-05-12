@@ -161,7 +161,7 @@
 				<div class="intro">
 					<h3 class="animate-this">About Us</h3>
                 <img src="images/RRFF.jpeg" width="300px">
-	   			<p class="lead animate-this">Rolling Reels is an annual Film Festival organized by Festember, the cultural Fest of NIT Trichy</p>	
+	   			<p class="lead animate-this">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>	
 				</div>
 
    		</div> <!-- end col-full  -->
@@ -180,10 +180,10 @@
    	<div class="row narrow section-intro with-bottom-sep animate-this">
    		<div class="col-full">
    			
-   				<h3>Services</h3>
-   			   <h1>What We Do.</h1>
+   				<h3>Events</h3>
+   			   <h1>Action at Rolling Reels.</h1>
    			
-   			   <p class="lead">Lorem ipsum Elit ut consequat veniam eu nulla nulla reprehenderit reprehenderit sit velit in cupidatat ex aliquip ut cupidatat Excepteur tempor id irure sed dolore sint sunt voluptate ullamco nulla qui Duis qui culpa voluptate enim ea aute qui veniam in irure et nisi nostrud deserunt est officia minim.</p>
+   			   <p class="lead">Rolling Reels Film Festival (RRFF) is an event held every year as a part of Festember, the annual cultural fest of NIT Trichy. Up until 2014, Festember did not sport any event related to movie-making. With a hefty increase in new, young film-makers taking the film industry by storm, it would only seem sensible to instate a platform which would act as a springboard for young talents. This lead to the incubation of RRFF - the first edition of the short film festival was held in September 2015, and was a success through and through</p>
    			
    	   </div> <!-- end col-full -->
    	</div> <!-- end row -->
@@ -260,7 +260,7 @@
    		<div class="row narrow section-intro with-bottom-sep animate-this">
 	   		<div class="col-twelve">
 	   			<h3>Showcase</h3>
-		   		<h1>See Our Featured Projects.</h1>  			
+		   		<h1>Some Past Film Entries.</h1>
 		   		
 		   		<p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>	   			
 	   		</div>   		
@@ -275,12 +275,11 @@
    				<div class="brick folio-item">
 	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-shutterbug.jpg" data-sub-html="#01" > 	
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/shutterbug.jpg" alt="Skaterboy">	                     
+	                  	<img src="images/portfolio/1973.jpg" alt="Skaterboy">	                     
 	                     <div class="item-text">
 	                     	<span class="folio-types">
-		     					      Web Development
 		     					   </span>
-		     					   <h3 class="folio-title">Shutterbug</h3>	     					   
+		     					   <h3 class="folio-title">1973</h3>	     					   
 		     					</div>                                        
 	                  </a>
 	                  <a href="https://www.behance.net/" class='details-link' title="details">
@@ -289,20 +288,18 @@
 	               </div> <!-- end item-wrap -->
 						
 						<div id="01" class='hide'>
-							<h4>Shutterbug</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+							<h4>1973</h4>
 						</div>
 	        		</div> <!-- end folio-item -->
 
 	        		<div class="brick folio-item">
 	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-yellowwall.jpg" data-sub-html="#02"> 	
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/yellowwall.jpg" alt="Shutterbug">	                     
+	                  	<img src="images/portfolio/amrita.jpg" alt="Shutterbug">	                     
 	                     <div class="item-text">
 	                     	<span class="folio-types">
-		     					      Marketing
 		     					   </span>
-		     					   <h3 class="folio-title">Yellow Wall</h3>  	     					   
+		     					   <h3 class="folio-title">Amrita aur Mein</h3>  	     					   
 		     					</div>                                        
 	                  </a>
 	                  <a href="https://www.behance.net/" class='details-link' title="details">
@@ -311,20 +308,18 @@
 	               </div> <!-- end item-wrap -->
 
 	               <div id="02" class='hide'>
-							<h4>Yellow Wall</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+							<h4>Amrita aur Mein</h4>
 						</div>	               
 	        		</div> <!-- end folio-item -->
 
 	        		<div class="brick folio-item">
 	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-architecture.jpg" data-sub-html="#03" >   	
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/architecture.jpg" alt="Explore">	                     
+	                  	<img src="images/portfolio/ann.jpg" alt="Explore">	                     
 	                     <div class="item-text">	                     		     					    
 		     					   <span class="folio-types">
-		     					      Web Design
 		     					   </span>
-		     					   <h3 class="folio-title">Architecture</h3>
+		     					   <h3 class="folio-title">Antha Naal Nyaabagam</h3>
 		     					</div>                                        
 	                  </a>
 	                  <a href="https://www.behance.net/" class='details-link' title="details">
@@ -333,20 +328,18 @@
 	               </div> <!-- end item-wrap -->	
 
 	               <div id="03" class='hide'>
-							<h4>Architecture</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+							<h4>Antha Naal Nyaabagam</h4>
 						</div>               
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
 	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-minimalismo.jpg"  data-sub-html="#04" >
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/minimalismo.jpg" alt="Minimalismo">	                     
+	                  	<img src="images/portfolio/Kaduthasi.jpg" alt="Minimalismo">	                     
 	                     <div class="item-text">	     					    
 		     					   <span class="folio-types">
-		     					      Web Design
 		     					   </span>
-		     					   <h3 class="folio-title">Minimalismo</h3>
+		     					   <h3 class="folio-title">Kaduthasi</h3>
 		     					</div>                                        
 	                  </a>
 	                  <a href="https://www.behance.net/" class='details-link' title="details">
@@ -355,20 +348,18 @@
 	               </div> <!-- end item-wrap -->
 
 	               <div id="04" class='hide'>
-							<h4>Minimalismo</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+							<h4>Kaduthasi</h4>
 						</div>  	               
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
 	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-skaterboy.jpg"  data-sub-html="#05" >  	
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/skaterboy.jpg" alt="Bicycle">	                     
+	                  	<img src="images/portfolio/SAVE.png" alt="Bicycle">	                     
 	                     <div class="item-text">	     					    
 		     					   <span class="folio-types">
-		     					      Branding
 		     					   </span>
-		     					   <h3 class="folio-title">Skaterboy</h3>
+		     					   <h3 class="folio-title">SAVE</h3>
 		     					</div>                                        
 	                  </a>
 	                  <a href="https://www.behance.net/" class='details-link' title="details">
@@ -377,20 +368,18 @@
 	               </div> <!-- end item-wrap -->
 
 	               <div id="05" class='hide'>
-							<h4>Skaterboy</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+							<h4>SAVE</h4>
 						</div>	               
 	        		</div> <!-- end folio-item -->
 	           
 					<div class="brick folio-item">
 	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#06">     	
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/salad.jpg" alt="Salad">	                     
+	                  	<img src="images/portfolio/Rishwat.jpg" alt="Salad">	                     
 	                     <div class="item-text">	     					    
 		     					   <span class="folio-types">
-		     					      Branding
 		     					   </span>
-		     					   <h3 class="folio-title">Salad</h3>
+		     					   <h3 class="folio-title">Rishwat</h3>
 		     					</div>                                        
 	                  </a>
 	                  <a href="https://www.behance.net/" class='details-link' title="details">
@@ -399,9 +388,28 @@
 	               </div> <!-- end item-wrap -->
 
 	               <div id="06" class='hide'>
-							<h4>Salad</h4>
-							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+							<h4>Rishwat</h4>
 						</div>	               
+	        		</div> <!-- end folio-item -->   				
+	           
+					<div class="brick folio-item">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#07">
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/Duddu.jpg" alt="Salad">	                     
+	                     <div class="item-text">	     					    
+		     					   <span class="folio-types">
+		     					   </span>
+		     					   <h3 class="folio-title">Duddu</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="07" class='hide'>
+							<h4>Rishwat</h4>
+						</div>
 	        		</div> <!-- end folio-item -->   				
 
    			</div> <!-- end folio-wrap -->
@@ -466,33 +474,6 @@
       </div> <!-- end flex-container -->
 
    </section> <!-- end testimonials -->
-
-
-	<!-- stats
-   ================================================== -->
-   <section id="clients">
-
-		<div class="row animate-this">
-			<div class="col-twelve">
-
-				<div class="client-lists owl-carousel">
-  					<div><img src="images/clients/mozilla.png" alt=""></div>
-  					<div><img src="images/clients/bower.png" alt=""></div>
-  					<div><img src="images/clients/codepen.png" alt=""></div>
-  					<div><img src="images/clients/envato.png" alt=""></div>
-  					<div><img src="images/clients/firefox.png" alt=""></div>
-  					<div><img src="images/clients/grunt.png" alt=""></div>
-  					<div><img src="images/clients/evernote.png" alt=""></div>
-  					<div><img src="images/clients/github.png" alt=""></div>
-  					<div><img src="images/clients/joomla.png" alt=""></div>
-  					<div><img src="images/clients/jQuery.png" alt=""></div>
-  					<div><img src="images/clients/wordpress.png" alt=""></div>
-				</div>
-				
-			</div> <!-- end col-twelve -->
-		</div> <!-- end row -->
-
-   </section> <!-- end clients -->
 
 
 	<!-- contact
