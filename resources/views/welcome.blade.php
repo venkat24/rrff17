@@ -272,7 +272,7 @@
    			<div id="folio-wrap" class="bricks-wrapper">					
 
    				<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-shutterbug.jpg" data-sub-html="#01" > 	
+	               <div class="item-wrap animate-this" data-src="images/portfolio/1973.jpg" data-sub-html="#01" > 	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/1973.jpg" alt="Skaterboy">	                     
 	                     <div class="item-text">
@@ -292,7 +292,7 @@
 	        		</div> <!-- end folio-item -->
 
 	        		<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-yellowwall.jpg" data-sub-html="#02"> 	
+	               <div class="item-wrap animate-this" data-src="images/portfolio/amrita.jpg" data-sub-html="#02"> 	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/amrita.jpg" alt="Shutterbug">	                     
 	                     <div class="item-text">
@@ -312,7 +312,7 @@
 	        		</div> <!-- end folio-item -->
 
 	        		<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/gallery/g-architecture.jpg" data-sub-html="#03" >   	
+	               <div class="item-wrap animate-this" data-src="images/portfolio/ann.jpg" data-sub-html="#03" >   	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/ann.jpg" alt="Explore">	                     
 	                     <div class="item-text">	                     		     					    
@@ -332,7 +332,7 @@
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-minimalismo.jpg"  data-sub-html="#04" >
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/Kaduthasi.jpg"  data-sub-html="#04" >
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/Kaduthasi.jpg" alt="Minimalismo">	                     
 	                     <div class="item-text">	     					    
@@ -352,7 +352,7 @@
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-skaterboy.jpg"  data-sub-html="#05" >  	
+	               <div class="item-wrap animate-this" data-src="images/portfolio/SAVE.png" data-sub-html="#05" >  	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/SAVE.png" alt="Bicycle">	                     
 	                     <div class="item-text">	     					    
@@ -372,7 +372,7 @@
 	        		</div> <!-- end folio-item -->
 	           
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#06">     	
+	               <div class="item-wrap animate-this" data-src="images/portfolio/Rishwat.jpg" data-sub-html="#06">     	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/Rishwat.jpg" alt="Salad">	                     
 	                     <div class="item-text">	     					    
@@ -392,7 +392,7 @@
 	        		</div> <!-- end folio-item -->   				
 	           
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/gallery/g-salad.jpg"  data-sub-html="#07">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/Duddu.jpg"  data-sub-html="#07">
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/Duddu.jpg" alt="Salad">	                     
 	                     <div class="item-text">	     					    
