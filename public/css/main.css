@@ -513,7 +513,8 @@ td:last-child {
     width: 150px;
     height: 150px;
     filter: invert(1);
-    margin-left: -142px;
+    margin-left: -145px;
+    transform: rotate(-1deg);
 }
 
 #loader {
