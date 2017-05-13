@@ -33,6 +33,6 @@ class Kernel extends HttpKernel
         'checkSession' => \App\Http\Middleware\SessionCheck::class,
         'checkSessionJSON' => \App\Http\Middleware\SessionCheckJSON::class,
         'checkSessionAdmin' => \App\Http\Middleware\SessionCheckAdmin::class,
-        'checkSessionJSONAdmin' => \App\Http\Middleware\SessionCheckJSONAdmin::class,
+        'checkSessionAdminJSON' => \App\Http\Middleware\SessionCheckAdminJSON::class,
     ];
 }

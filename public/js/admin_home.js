@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//home();
+    initMat();
 });
 
 function initMat() {
@@ -8,30 +8,29 @@ function initMat() {
     });
 }
 
-function home() {
-	var source = $("#table").html();
-	var template = Handlebars.compile(source);
+function setMovieStatus() {
+    if($('#movie').prop('checked')) 
+        var movie_status = 1;
+    else 
+        var movie_status = 0;
 
-	var route = '/common/getall';
-	var method = 'POST';
+    var route = '/api/setmoviestatus';
+    var method = 'POST';
 
-	var request = $.ajax({
-		url: route,
-		method: method,
-		data: {
-		}
-	});
+    var request = $.ajax({
+        url: route,
+        type: method,
+        data: {
+            'movie_status' : movie_status
+        }
+    });
 
-	request.done(function(data){
-		$('#login_button').prop("disabled",false);
-		var info = JSON.parse(data);
-		if(info.status_code == 200) {
-			var context = info;
-			var html = template(context);
-			$('body').append(html);
-			initMat();
-		} else {
-			alert('Fetch Failed');
-		}
-	});
+    request.done(function(data){
+        if(data.status_code == 200) {
+            Materialize.toast('Movie status set successfully', 4000);
+        } else {
+            alert('Set Failed');
+            console.log(data.message);
+        }
+    });
 }

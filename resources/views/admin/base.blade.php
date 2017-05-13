@@ -26,6 +26,10 @@
 	      background: #fff;
 	    }
 
+        nav {
+            background-color: #FB8007;
+        }
+
 	    .input-field input[type=date]:focus + label,
 	    .input-field input[type=text]:focus + label,
 	    .input-field input[type=email]:focus + label,
@@ -50,7 +54,7 @@
 		  <nav>
 		    <div class="nav-wrapper">
 		      <img src="/images/logo.png" style="width:50px;margin:5px;" onclick="location.href = SITE_BASE_URL + '/admin/home'">
-		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		      <ul id="nav-mobile" class="right">
 		        <li><a class="dropdown-button" href="#!">Registrations</a></li>
 		        <li onclick="logout()"><a href="#">Logout</a></li>
 		      </ul>

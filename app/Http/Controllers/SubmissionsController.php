@@ -11,15 +11,17 @@ use Exception;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Http\Requests;
-use App\Models\Submission;
 use Sangria\JSONResponse;
+use App\Models\Submission;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 
 /**
  * Controller to handle all submission related requests
  */
 class SubmissionsController extends Controller
 {
+    // GET FUNCTIONS
     /**
      * Function to return the current submission status of
      * the participant.
@@ -32,11 +34,12 @@ class SubmissionsController extends Controller
                 return JSONResponse::response(400,"User does not exist");
 
             }
-            $submission = Submission::where('user_id','=',$user_id->id)->get();
+            $submission = Submission::join('users','users.id','=','submissions.user_id')
+                                    ->where('user_id','=',$user_id->id)
+                                    ->get();
             if(!$submission->count()) {
                 return JSONResponse::response(400,"Submission does not exist");
             } 
-
             return JSONResponse::response(200,$submission[0]);
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());
@@ -44,6 +47,32 @@ class SubmissionsController extends Controller
         }
     }
 
+    public function getPoster(Request $request) {
+        try {
+            $user_email = Session::get('user_email');
+            //$user_email = "venkat24@outlook.com";
+            $user_id    = User::where('email','=',$user_email)->first();
+            if(!$user_id->count()) {
+                return JSONResponse::response(400,"User does not exist");
+            }
+            $submission = Submission::where('user_id','=',$user_id->id)->get();
+            if(!$submission->count()) {
+                return JSONResponse::response(400,"Submission does not exist");
+            } 
+            if(!$submission[0]->poster_submitted) {
+                return JSONResponse::response(400,"Poster wasn't submitted");
+            }
+
+            $filename = $submission[0]->poster_path;
+            $storage_path = storage_path('posters/'.$filename);
+            return Image::make($storage_path)->response();
+        } catch (Exception $e) {
+            Log::error($e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500, $e->getMessage());
+        }
+    }
+
+    // SET FUNCTIONS
     /**
      * Function to set the title of a submission
      */
@@ -134,5 +163,31 @@ class SubmissionsController extends Controller
         $image->move(storage_path('posters'), $filename);
 
         return 'Submitted Successfully';
+    }
+    
+    public function setMovieStatus(Request $request) {
+        try {
+            $validator = Validator::make($request->all(), [
+                'movie_status' => 'required'
+            ]);
+
+            if($validator->fails()) {
+                $message = "Invalid parameters";
+                return JSONResponse::response(400, $message);
+            }
+
+            $user_email = Session::get('user_email');
+            $user_id    = User::where('email','=',$user_email)->first();
+
+            Submission::where('user_id','=',$user_id->id)
+                ->update([
+                    'movie_submitted' => $request->input('movie_status'),
+                ]);
+            return JSONResponse::response(200, "Movie status set successfully");
+
+        } catch (Exception $e) {
+            Log::error($e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500, $e->getMessage());
+        }
     }
 }

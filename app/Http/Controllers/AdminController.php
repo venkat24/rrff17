@@ -60,7 +60,8 @@ class AdminController extends Controller
 
     public function adminMainView(Request $request) {
         try {
-            $submissions = Submission::get();
+            $submissions = Submission::join('users','users.id','=','submissions.user_id')
+                                    ->get();
             return view('admin.home',['submissions' => $submissions]);
         } catch (Exception $e) {
             $response = $e->getMessage()." ".$e->getLine();

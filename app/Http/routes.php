@@ -29,6 +29,7 @@ Route::get('/admin', function () {
 
 Route::group(['middleware' => 'checkSessionAdmin'], function() {
     Route::get('/admin/home','AdminController@adminMainView');
+    Route::get('/api/getposter','SubmissionsController@getPoster');
 });
 
 Route::group(['middleware' => 'checkSession'], function() {
@@ -51,11 +52,13 @@ Route::group(['middleware' => 'setResponseHeaders'], function() {
 });
 
 Route::group(['middleware' => ['checkSessionAdminJSON','setResponseHeaders']], function() {
+    Route::post('/api/setmoviestatus','SubmissionsController@setMovieStatus');
 });
 
 Route::group(['middleware' => ['checkSessionJSON','setResponseHeaders']], function() {
     // Submission Routes
     Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
     Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
+    Route::post('/api/settitle','SubmissionsController@setTitle');
     Route::post('/api/uploadposter','SubmissionsController@setPoster');
 });

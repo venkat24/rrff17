@@ -18,6 +18,13 @@
       background: #fff;
     }
 
+    footer {
+        background-color: #FF9E3E;
+    }
+    .footer-copyright {
+        background-color: #FB8007;
+    }
+
     .input-field input[type=date]:focus + label,
     .input-field input[type=text]:focus + label,
     .input-field input[type=email]:focus + label,
