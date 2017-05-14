@@ -420,9 +420,22 @@
 		});
 	};	
 
+    // Modals
+    $('.button').click(function(){
+        var buttonId = $(this).attr('data-num');
+		console.log(buttonId);
+        $("[data-container-num="+buttonId+"]").removeAttr('class').addClass("one");
+        $('body').addClass('modal-active');
 
-  
-  /* Initialize
+    })
+
+    $('#modal-container').click(function(){
+        $(this).addClass('out');
+        $('body').removeClass('modal-active');
+
+    });
+
+    /* Initialize
 	* ------------------------------------------------------ */
 	(function ssInit() {
 

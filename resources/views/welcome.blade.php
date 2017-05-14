@@ -40,7 +40,7 @@
    <header> 
 
    	<div class="header-logo">
-	      <a href="index.html"><img src="images/logo.png"></a>
+	      <a href="https://festember.com"><img src="images/logo.png"></a>
 	   </div> 
 
 		<a id="header-menu-trigger" href="#0">
@@ -65,20 +65,11 @@
 
 			<ul class="header-social-list">
 	         <li>
-	         	<a href="#"><i class="fa fa-facebook-square"></i></a>
+	         	<a href="https://www.facebook.com/festember/"><i class="fa fa-facebook-square"></i></a>
 	         </li>
 	         <li>
-	         	<a href="#"><i class="fa fa-twitter"></i></a>
+	         	<a href="https://twitter.com/festember"><i class="fa fa-twitter"></i></a>
 	         </li>
-	         <li>
-	         	<a href="#"><i class="fa fa-instagram"></i></a>
-	         </li>
-            <li>
-            	<a href="#"><i class="fa fa-behance"></i></a>
-            </li>
-	         <li>
-	         	<a href="#"><i class="fa fa-dribbble"></i></a>
-	         </li>	         
 	      </ul>		
 
 		</nav>  <!-- end #menu-nav-wrap -->
@@ -121,21 +112,12 @@
 		</div> <!-- end home-content-table -->
 
 		<ul class="home-social-list">
-	      <li class="animate-intro">
-	        	<a href="#"><i class="fa fa-facebook-square"></i></a>
-	      </li>
-	      <li class="animate-intro">
-	        	<a href="#"><i class="fa fa-twitter"></i></a>
-	      </li>
-	      <li class="animate-intro">
-	        	<a href="#"><i class="fa fa-instagram"></i></a>
-	      </li>
-         <li class="animate-intro">
-           	<a href="#"><i class="fa fa-behance"></i></a>
-         </li>
-	      <li class="animate-intro">
-	        	<a href="#"><i class="fa fa-dribbble"></i></a>
-	      </li>	      
+	         <li>
+	         	<a href="https://www.facebook.com/festember/"><i class="fa fa-facebook-square"></i></a>
+	         </li>
+	         <li>
+	         	<a href="https://twitter.com/festember"><i class="fa fa-twitter"></i></a>
+	         </li>
 	   </ul> <!-- end home-social-list -->	
 
 		<div class="scrolldown">
@@ -193,8 +175,6 @@
 
 	      	<div class="bgrid service-item animate-this">	
 
-	      		<span class="icon"><i class="icon-paint-brush"></i></span>            
-
 	            <div class="service-content">
 	            	<h3 class="h05">Branding</h3>
 
@@ -206,10 +186,8 @@
 
 				<div class="bgrid service-item animate-this">	
 
-					<span class="icon"><i class="icon-earth"></i></span>                          
-
 	            <div class="service-content">	
-	            	<h3 class="h05">Web Design</h3>  
+	            	<h3 class="h05">Movie Screening</h3>
 
 		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 	         		</p>	         		
@@ -219,10 +197,8 @@
 
 			   <div class="bgrid service-item animate-this">
 
-			   	<span class="icon"><i class="icon-lego-block"></i></span>		            
-
 	            <div class="service-content">
-	            	<h3 class="h05">Web Development</h3>
+	            	<h3 class="h05">Workshop</h3>
 
 		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 	        			</p>
@@ -232,10 +208,8 @@
 
 				<div class="bgrid service-item animate-this">
 
-					<span class="icon"><i class="icon-megaphone"></i></span>	              
-
 	            <div class="service-content">
-	            	<h3 class="h05">Marketing</h3>
+	            	<h3 class="h05">Something Else</h3>
 
 		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 	         		</p>	         		
@@ -271,10 +245,17 @@
                     	<div class="author-info">
                     		R Velraj
                     		<span class="position">Director</span>
+							<br>
+						    <p>Mr R Velraj is the blockbuster director behind Kollywood box office smashers like <em>Velai Illa Pattadhari, Thanga Magan. </em>He also worked on other Tamil, Malayalam and Hindi Films, including <em>Aadukalam, Kandahar, Polladhavan, and Engeyun Eppodhum.</em></p> 
+<br>
+							<div class="content">
+							  <div class="buttons">
+								<div id="one" class="button button-full-width" data-num="1">Read More</div>
+							  </div>
+							</div>
                     	</div>
                   </div>
 
-                  <p></p> 
              	</li> <!-- end slide -->
 
                <li>
@@ -283,10 +264,16 @@
                     	<div class="author-info">
                     		Sreekar Prasad
                     		<span>Film Editor</span>
+							<br>
+							<p>Mr Sreekar Prasad is a Nation Award winning editor, known for Telugu, Malayalam, and Tamil films including <em>Okkandu, Kannathil Muthamittal, Pazhassi Raja, Kaththi, Pizza, Naanum Rowdy Thaan,</em> and recently, <em>Kaatru Veliyidai.</em> Mr Prasad will be condcuting an editing workshop this Rolling Reels.</p>
                     	</div>
+							<div class="content">
+							  <div class="buttons">
+								<div id="one" class="button" data-num="2">Read More</div>
+							  </div>
+							</div>
                   </div>                                         
 
-                  <p></p>
                </li> <!-- end slide -->
 
                <li>
@@ -295,10 +282,15 @@
                     	<div class="author-info">
                     		DRK Kiran
                     		<span>Actor / Art Director</span>
-                    	</di5>
+							<br>
+							<p>Mr DRK Kiran is easily recognizable from his roles in <em>Anegan</em> and <em>Ko</em>, and he also did the Art Direction for these movies, among several other blockbusters, including <em>Kavan</em> and <em>Naanum Rowdy Thaan. </em>We are delighted to associate with Kiran Sir this Rolling Reels!</p>
+							<div class="content">
+							  <div class="buttons">
+								<div id="one" class="button" data-num="3">Read More</div>
+							  </div>
+							</div>
+                    	</div>
                   </div>                                         
-
-                  <p></p>
                </li> <!-- end slide -->
 
             </ul> <!-- end slides -->
@@ -473,9 +465,8 @@
    			</div> <!-- end folio-wrap -->
    		</div> <!-- end twelve -->
    	</div> <!-- end portfolio-content -->   	
-
+<br /><br />
    </section>  <!-- end portfolio -->
-
 
 	<!-- contact
    ================================================== -->
@@ -607,6 +598,93 @@
    <div id="preloader-img-container">
       <img id="loader" class="animate-reel" src="images/reel.png">
    </div>
+
+   <!-- Modals
+   ================================================== -->
+
+    <div id="modal-container" data-container-num="1">
+      <div class="modal-background">
+        <div class="modal">
+          <h2>R Velraj</h2>
+          <p>R.Velraj is an Indian cinematographer who was born in a village called
+			 Kutthiyar Kundu near Madurai, Tamil Nadu. At his early stage, he was
+			 associated with cinematographer Tirru and worked in several Tamil films
+			 as assistant cinematographer, notably Aalavandhan etc., also worked
+			 mainly in Tamil, Malayalam and Hindi films including Polladhavan,
+			 Aadukalam, Kandahar and Engeyum Eppodhum. He shot to fame and became a
+			 true professional in Kollywood industry after donning the director’s cap
+			 for the super hit blockbuster project, Velai Illa Pattadhaari. He
+			 carried forth the same energy and success in his next project as
+			 director, Thanga Magan. Velraj is a truly an inspiration to many trying
+			 to enter today’s film industry. From association with the
+			 cinematography, to making it big today in the Film Industry- he is
+			 exactly the kind of inspiration each one of us aspiring film makers need
+			 today. We are thus, more than happy, and proud to announce that our
+			 first jury member, Velraj sir has given us his full support, and looks
+			 forward to watching the submitted entries and providing valuable
+			 feedback.
+			 </p>
+          <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                                    <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+                                </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-container" data-container-num="2">
+      <div class="modal-background">
+        <div class="modal">
+          <h2>Sreekar Prasad</h2>
+          <p>Editing is a world of its own where a film could be reborn, it is at
+the editing table where a film takes actual shape and is infused with a
+comprehensive dimension.
+
+Words that cant better describe what editing means to a film, proves
+the immaculate knowledge, understanding, experience and most
+importantly, the love this man has towards this sector of
+production-this art. A man whose unending urge and endeavour is to share
+his experiences with upcoming editors, Sreekar Prasad is a true
+embodiment of experience. Starting from Telugu Films, he soon rose to
+National Acclaim in both Malayalam and Tamil films. There are too many
+films against his name to mention them all. But a few notable ones
+include Kannathil Muthamittai, winning him the National Award for Best
+Editting in 2002; the telugu hit Okkadu; Bollywood hits include Guru and
+Kaminey; Malayalam hits like Kutty Srank and Pazhassi Raja; and Tamil
+hits such as Aarambam, Billa, Kaththi, Pizza, Alaiypayuthe, Naanum Rowdy
+Thaan, Thuppakki, and recently, Kaatru Velliyidai.
+
+So join us for a treat this workshop at RRFF 17, for the session with
+this master craftsmen is sure to set evergreen, lasting memories in your
+mind, learning certain aspects that are tough to gain anywhere else.
+</p>
+          <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                                    <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+                                </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-container" data-container-num="3">
+      <div class="modal-background">
+        <div class="modal">
+          <h2>DRK Kiran</h2>
+          <p>When looking to find the people who best understand what rising
+through the ranks in filn industry is, the most relatable youth in
+today’s film industry in this aspect is Art Director/ supporting Actor
+DRK Kiran. Kiran sir has many movies to his name as the art director,
+including blockbusters like Kavan, Ko, Naanum Rowdy Thaan and Anegan. He
+has also played supporting roles in Anegan and Ko. With an enthusiasm
+for films and unique storylines since early ages, Kiran sir is excited
+to be part of the jury for RRFF 2017. We are glad to associate with sir
+this year, as we look to make RRFF 2017 a memorable experience for him
+and for us!
+</p>
+          <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                                    <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+                                </svg>
+        </div>
+      </div>
+    </div>
 
    <!-- Java Script
    ================================================== -->
