@@ -14,16 +14,15 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function(Blueprint $table)   {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id');
             $table->string('user_name', 255);
-            $table->string('user_email', 255)->unique();
+            $table->string('user_email', 255);
             $table->string('ticket_name', 255);
             $table->string('event_code', 255);
             $table->integer('ticket_price')->unsigned();
-            $table->string('order_id')->unique();
+            $table->string('order_id');
             $table->dateTime('registration_timestamp');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

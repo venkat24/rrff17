@@ -139,6 +139,8 @@
             <h2>Submit Poster</h2>
 
             <p class="lead">Submit your film's poster here. Ensure the filesize is less that 3Mb. JPG and PNG only.</p>
+            <div id="poster-image-container">
+            </div>
             <form action="/api/uploadposter" method="POST" enctype="multipart/form-data">
                 <label for="photography-file">Upload Poster*</label>
                 <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
@@ -147,6 +149,14 @@
                 <input class="button-primary" type="submit" value="Upload Poster">
             </form>
 
+            <hr>
+
+            <br><br>
+
+            <h2>Registration Fee</h2>
+
+            <p class="lead">Click the button below to purchase your spot for a submission to Rolling Reels!</p>
+            <button  class="button-primary" onclick="popup('rolling-reels-film-festival-404140');" class="tsbutton">Pay Now</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
         </div>
 
         <div class="col-twelve tab-full">

@@ -13,13 +13,13 @@
                     <p style="font-size:14pt;float:right">{{$submission->name}}<p>
                   </div>
                   <div class="collapsible-body row">
-                    @if($submission->poster_submitted)
                     <div class="col s12" style="margin:0;padding:0;">
                         <p style="padding: 10px 30px;"><strong>Name : </strong>{{$submission->name}}</p>
                         <p style="padding: 10px 30px;"><strong>Film Name : </strong>{{$submission->title}}</p>
                         <p style="padding: 10px 30px;"><strong>Email : </strong>{{$submission->email}}</p>
                         <p style="padding: 10px 30px;"><strong>Phone Number : </strong>{{$submission->phone}}</p>
                     </div>
+                    @if($submission->poster_submitted)
                     <div class="col s3 center-align">
                         <p>
                           <input type="checkbox" id="poster" checked="checked" disabled="disabled" />
@@ -76,7 +76,7 @@
                     </div>
                     @if($submission->poster_submitted)
                         <p style="width:100%;text-align:center">
-                            <img src="/api/getposter" width="80%">
+                            <img src="/admin/getposter?user_id={{$submission->user_id}}" width="80%">
                         </p>
                     @endif
                     @if($submission->synopsis_submitted)

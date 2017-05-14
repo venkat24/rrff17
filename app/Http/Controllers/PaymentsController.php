@@ -11,49 +11,77 @@ use Log;
 use Validator;
 use Exception;
 
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
+
 use Sangria\JSONResponse;
 
 use App\Models\User;
 use App\Models\Payment;
+use App\Models\Submission;
 
 class PaymentsController extends Controller
 {
+    public function refreshPaymentsList(Request $request) {
+        try {
+            $client = new Client();
+            $url = "https://www.townscript.com/api/registration/getRegisteredUsers";
+            $response = $client->get($url,[
+                'headers' => [
+                    'email' => env('TOWNSCRIPT_EMAIL'),
+                    'secret_key' => env('TOWNSCRIPT_SECRET_KEY')
+                ],
+                'query' => [
+                    'eventCode' => env('TOWNSCRIPT_EVENT_CODE')
+                ]
+            ]);
+            $bodyJSON = $response->getBody();
+            $body = json_decode($bodyJSON);
+            $data = json_decode($body->data);
+            return $data;
+        } catch (Exception $e) {
+            return "Payment Failed. ".$e->getMessage()." ".$e->getLine();
+            return -1;
+        }
+    }
+    public function handleTownscriptWebhook(Request $request) {
+        try {
+            $data = PaymentsController::refreshPaymentsList($request);
+            if($data == -1) {
+                return JSONResponse::response(400, 'TownScript Request Failed');
+            }
+            Payment::truncate();
+            foreach($data as $registrant) {
+                $email = $registrant->userEmailId;
+                $user_id = User::where('email','=',$email)
+                               ->pluck('id');
+                if(!$user_id){
+                    $user_id = -1;
+                } else {
+                    Submission::where('user_id','=',$user_id)
+                              ->update([
+                                  'payment_submitted' => 1
+                              ]);
+                }
+                Payment::insert([
+                    'user_id'                => $user_id,
+                    'order_id'               => $registrant->uniqueOrderId,
+                    'user_name'              => $registrant->userName,
+                    'user_email'             => $registrant->userEmailId,
+                    'ticket_name'            => $registrant->ticketName,
+                    'event_code'             => $registrant->eventCode,
+                    'ticket_price'           => $registrant->totalTicketAmount,
+                    'registration_timestamp' => $registrant->registrationTimestamp,
+                ]);
+            }
+            return JSONResponse::response(200,'Successful Payment Update');
+        } catch (Exception $e) {
+            Log::error("Payment Failed. ".$e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500,"Payment Failed. ".$e->getMessage()." ".$e->getLine());
+        }
+    }
     public function initiatePayment(Request $request) {
         try {
-            $validator = Validator::make($request->all(),[
-                'uniq_id' => 'required|string'
-            ]);
-
-            if($validator->fails()) {
-                Log::warning('Validation Fails'.json_encode($request->all()));
-                return redirect()->to('/payment_error');
-            }
-
-            $user_payment_id = $request->input('uniq_id');
-
-            $user_details = User::where('user_payment_id',$user_payment_id)->first();
-            if(!$user_details) {
-                Log::warning('Invalid Payment ID'.json_encode($request->all()));
-                return redirect()->to('/participant/payment_error');
-            }
-
-            $payment_details = Payment::where('user_id',$user_details->id)->first();
-            if(!$payment_details)
-            {
-                
-                $params = [
-                    'status'     => 'not_paid',
-                    'event_code' => env('TOWNSCRIPT_EVENT_CODE'),
-                    'user_name'  => $user_details->name,
-                    'user_email' => $user_details->email,
-                    //'user_phone' => $user_details->phone,
-                    //'user_from'  => empty($user_details->user_college)?$user_details->user_organization:$user_details->user_college
-                ];
-
-                Log::info('Payment Initialized for user: '.$user_details->id);
-                return view('payment',$params);
-            }
-
         } catch (Exception $e) {
             Log::error("Payment Failed. ".$e->getMessage()." ".$e->getLine());
             return redirect()->to('/payment_error');

@@ -47,14 +47,38 @@ class SubmissionsController extends Controller
         }
     }
 
+    public function getPosterAdmin(Request $request) {
+        try {
+            $validator = Validator::make($request->all(), [
+                'user_id' => 'required|integer'
+            ]);
+
+            if($validator->fails()) {
+                $message = "Invalid parameters";
+                return JSONResponse::response(400, $message);
+            }
+            $user_id = $request->input('user_id');
+            $submission = Submission::where('user_id','=',$user_id)->get();
+            if(!$submission) {
+                return JSONResponse::response(400,"Submission does not exist");
+            } 
+            if(!$submission[0]->poster_submitted) {
+                return JSONResponse::response(400,"Poster wasn't submitted");
+            }
+
+            $filename = $submission[0]->poster_path;
+            $storage_path = storage_path('posters/'.$filename);
+            return Image::make($storage_path)->response();
+        } catch (Exception $e) {
+            Log::error($e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500, $e->getMessage()." ".$e->getLine());
+        }
+    }
+
     public function getPoster(Request $request) {
         try {
-            $user_email = Session::get('user_email');
-            //$user_email = "venkat24@outlook.com";
-            $user_id    = User::where('email','=',$user_email)->first();
-            if(!$user_id->count()) {
-                return JSONResponse::response(400,"User does not exist");
-            }
+            $email = Session::get('user_email');
+            $user_id = User::where('email','=',$email)->first();
             $submission = Submission::where('user_id','=',$user_id->id)->get();
             if(!$submission->count()) {
                 return JSONResponse::response(400,"Submission does not exist");
@@ -62,7 +86,6 @@ class SubmissionsController extends Controller
             if(!$submission[0]->poster_submitted) {
                 return JSONResponse::response(400,"Poster wasn't submitted");
             }
-
             $filename = $submission[0]->poster_path;
             $storage_path = storage_path('posters/'.$filename);
             return Image::make($storage_path)->response();

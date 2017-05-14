@@ -28,17 +28,21 @@ Route::get('/admin', function () {
 });
 
 Route::group(['middleware' => 'checkSessionAdmin'], function() {
+    Route::get('/admin/getposter','SubmissionsController@getPosterAdmin');
     Route::get('/admin/home','AdminController@adminMainView');
-    Route::get('/api/getposter','SubmissionsController@getPoster');
 });
 
 Route::group(['middleware' => 'checkSession'], function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
     });
+    Route::get('/api/getposter','SubmissionsController@getPoster');
 });
 
 Route::group(['middleware' => 'setResponseHeaders'], function() {
+    // Payment Routes
+    Route::post('/api/registrationwebhook','PaymentsController@handleTownscriptWebhook');
+
     // Authentication Routes
     Route::post('/api/login','AuthController@authenticateUser');
     Route::post('/api/logout','AuthController@logoutUser');
