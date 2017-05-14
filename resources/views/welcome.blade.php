@@ -403,9 +403,9 @@
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/SAVE.png" data-sub-html="#05" >  	
+	               <div class="item-wrap animate-this" data-src="images/portfolio/SAVE.jpg" data-sub-html="#05" >  	
 	                  <a href="#" class="overlay">
-	                  	<img src="images/portfolio/SAVE.png" alt="Bicycle">	                     
+	                  	<img src="images/portfolio/SAVE.jpg" alt="Bicycle">	                     
 	                     <div class="item-text">	     					    
 		     					   <span class="folio-types">
 		     					   </span>
