@@ -40,11 +40,12 @@
             $('#loader').animate({
                 animationDuration: '3s',
             });
+            $('#preloader-img-container').append('<img class="reel2" src="images/reel2.png" style="opacity: 0">');
+            var leftPixels = window.innerWidth/2 - 45;
             $('#preloader-img-container').animate({
-                left: '46.7%',
+                left: leftPixels+'px',
                 top :'16%',
             },2000);
-            $('#preloader-img-container').append('<img class="reel2" src="images/reel2.png" style="opacity: 0">');
             setTimeout(function() {
                 $('.reel2').animate({
                     opacity: '1'
@@ -54,6 +55,14 @@
 		  //}); 
 	  	});
 	}; 
+
+    $(window).resize(function () {
+        var leftPixels = window.innerWidth/2 - 45;
+        $('#preloader-img-container').animate({
+            left: leftPixels+'px',
+            top :'16%',
+        },500);
+    });
 
 
 	/* FitVids
