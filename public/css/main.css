@@ -503,18 +503,23 @@ td:last-child {
 }
 
 #preloader-img-container {
-    position: absolute;
-    left: 50%;
-    top: 40%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
 }
 
 .reel2 {
-    transition: all 0.5s ease-in-out;
-    width: 150px;
-    height: 150px;
-    filter: invert(1);
-    margin-left: -145px;
-    transform: rotate(-1deg);
+  transition: all 0.5s ease-in-out;
+  width: 150px;
+  height: 150px;
+  filter: invert(1);
+  transform: rotate(-1deg);
+}
+.reel2-margin {
+  margin-left: -145px;
+}
+.reel2-margin-small {
+  margin-left: -59px;
 }
 
 #loader {
@@ -1596,6 +1601,16 @@ header .header-logo a {
 .home-content-tablecell .more {
   margin: 4.8rem 0 0 0;
 }
+.home-content-tablecell .more .early-bird-prompt {
+    font-family: "montserrat-bold", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 2px red,
+                 0px 0px 4px red,
+                 2px 2px 1px black;
+    margin-bottom: -17px;
+}
 .home-content-tablecell .more .button {
   border-color: #FFFFFF;
   color: #FFFFFF;
@@ -2346,6 +2361,10 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   display: block;
   /*border-radius: 50%;*/
   vertical-align: middle;
+}
+#testimonial-slider .testimonial-author .reel-sub {
+	width: 100px !important;
+	height: 100px !important;
 }
 #testimonial-slider .testimonial-author .author-info {
   display: inline-block;
@@ -3168,5 +3187,144 @@ footer h4.h05::after {
   }
   100% {
     transform: scale(0);
+  }
+}
+
+/* TIMELINE */
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+  font-family: "montserrat-bold", sans-serif;
+  text-transform: uppercase;
+  color: black;
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #F89E0F;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F89E0F transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F89E0F;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #F89E0F;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F89E0F transparent transparent;
   }
 }

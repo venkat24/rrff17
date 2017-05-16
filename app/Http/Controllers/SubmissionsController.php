@@ -30,9 +30,9 @@ class SubmissionsController extends Controller
         try {
             $user_email = Session::get('user_email');
             $user_id    = User::where('email','=',$user_email)->first();
-            if(!$user_id->count()) {
+            if(!$user_id) {
+                Session::flush();
                 return JSONResponse::response(400,"User does not exist");
-
             }
             $submission = Submission::join('users','users.id','=','submissions.user_id')
                                     ->where('user_id','=',$user_id->id)
@@ -43,7 +43,7 @@ class SubmissionsController extends Controller
             return JSONResponse::response(200,$submission[0]);
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());
-            return JSONResponse::response(500, $e->getMessage());
+            return JSONResponse::response(500, $e->getMessage()." ".$e->getLine());
         }
     }
 
@@ -191,7 +191,8 @@ class SubmissionsController extends Controller
     public function setMovieStatus(Request $request) {
         try {
             $validator = Validator::make($request->all(), [
-                'movie_status' => 'required'
+                'user_id'      => 'required|string',
+                'movie_status' => 'required|string'
             ]);
 
             if($validator->fails()) {
@@ -199,10 +200,9 @@ class SubmissionsController extends Controller
                 return JSONResponse::response(400, $message);
             }
 
-            $user_email = Session::get('user_email');
-            $user_id    = User::where('email','=',$user_email)->first();
+            $user_id = $request->input('user_id');
 
-            Submission::where('user_id','=',$user_id->id)
+            Submission::where('user_id','=',$user_id)
                 ->update([
                     'movie_submitted' => $request->input('movie_status'),
                 ]);
@@ -210,7 +210,7 @@ class SubmissionsController extends Controller
 
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());
-            return JSONResponse::response(500, $e->getMessage());
+            return JSONResponse::response(500, $e->getMessage()." ".$e->getLine());
         }
     }
 }

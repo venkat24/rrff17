@@ -46,3 +46,59 @@ function getSubmissionStatus() {
 		}
 	});
 }
+
+function setTitle() {
+    $('#title-submit').prop("disabled",true);
+    $('#title-submit').removeClass('button-primary');
+    $('#title-submit').addClass('button');
+	var route = '/api/settitle';
+	var method = 'POST';
+
+    var request = $.ajax({
+        url: route,
+        type: method,
+        data: {
+            'title' : $('#title').val()
+        }
+    });
+
+	request.done(function(data){
+		$('#title-submit').prop("disabled",false);
+        $('#title-submit').removeClass('button');
+        $('#title-submit').addClass('button-primary');
+		if(data.status_code == 200) {
+            alert('Title Set Successfully');
+		} else {
+			alert('Title Set Failed');
+            console.log(data.message);
+		}
+	});
+}
+
+function setSynopsis() {
+    $('#synopsis-submit').prop("disabled",true);
+    $('#synopsis-submit').removeClass('button-primary');
+    $('#synopsis-submit').addClass('button');
+	var route = '/api/setsynopsis';
+	var method = 'POST';
+
+    var request = $.ajax({
+        url: route,
+        type: method,
+        data: {
+            'synopsis' : $('#synopsis').val()
+        }
+    });
+
+	request.done(function(data){
+		$('#synopsis-submit').prop("disabled",false);
+        $('#synopsis-submit').removeClass('button');
+        $('#synopsis-submit').addClass('button-primary');
+		if(data.status_code == 200) {
+            alert('Synopsis Set Successfully');
+		} else {
+			alert('Synopsis Set Failed');
+            console.log(data.message);
+		}
+	});
+}

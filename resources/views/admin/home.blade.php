@@ -66,12 +66,12 @@
                     @endif
                     <div class="col s3 center-align">
                         <p>
-                          <input type="checkbox" id="movie" onchange="setMovieStatus();return false;"
+                          <input type="checkbox" id="movie_{{$submission->user_id}}" onchange="setMovieStatus({{$submission->user_id}});return false;"
                         @if($submission->movie_submitted)
                           checked="checked"
                         @endif
                             />
-                          <label for="movie">Movie</label>
+                          <label for="movie_{{$submission->user_id}}">Movie</label>
                         </p>
                     </div>
                     @if($submission->poster_submitted)

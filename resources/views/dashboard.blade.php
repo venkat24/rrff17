@@ -50,6 +50,42 @@
     <div class="header-logo">
           <a href="index.html">Infinity</a>
        </div> 
+
+		<a id="header-menu-trigger" href="#0">
+		 	<span class="header-menu-text">Menu</span>
+		  	<span class="header-menu-icon"></span>
+		</a> 
+
+		<nav id="menu-nav-wrap">
+
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
+
+	   	<h3>Rolling Reels</h3>  
+
+            @if(Session::get('user_email'))
+            <h6 style="color: white">Welcome {{Session::get('user_email')}}</h6>
+            @endif
+			<ul class="nav-list">
+				<li><a href="/">Home</a></li>
+				<li><a href="/register">Register</a></li>
+                @if(Session::get('user_email'))
+				<li class="current"><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/api/logout">Logout</a></li>
+                @else
+                <li><a href="/login">Login</a></li>
+                @endif
+			</ul>	
+			<ul class="header-social-list">
+	         <li>
+	         	<a href="https://www.facebook.com/festember/"><i class="fa fa-facebook-square"></i></a>
+	         </li>
+	         <li>
+	         	<a href="https://twitter.com/festember"><i class="fa fa-twitter"></i></a>
+	         </li>
+	      </ul>		
+
+		</nav>  <!-- end #menu-nav-wrap -->
+
     </header> <!-- end header -->  
 
    <!-- styles
@@ -112,12 +148,10 @@
 
             <h2>Submit Title</h2>
 
-            <p class="lead">Enter your movie's title here. Limit - 10000 Characters</p>
-            <form action="/api/settitle" method="POST">
-                <input type=text name="title" id="title" class="full-width" placehoder="Title">
-                <br>
-                <input class="button-primary" type="submit" value="Set Title">
-            </form>
+            <p class="lead">Enter your movie's title here. Limit - 60 Words</p>
+            <input type=text name="title" id="title" class="full-width" placehoder="Title">
+            <br>
+            <input class="button-primary" type="submit" value="Set Title" id="title-submit" onclick="setTitle();return false;">
 
             <hr>
 
@@ -126,11 +160,9 @@
             <h2>Submit Synopsis</h2>
 
             <p class="lead">Enter your movie's synopsis here. Limit - 10000 Characters</p>
-            <form action="/api/setsynopsis" method="POST">
-                <textarea name="synopsis" id="synopsis" class="full-width" placehoder="Synopsis"></textarea>
-                <br>
-                <input class="button-primary" type="submit" value="Set Synopsis">
-            </form>
+            <textarea name="synopsis" id="synopsis" class="full-width" placehoder="Synopsis"></textarea>
+            <br>
+            <input class="button-primary" type="submit" value="Set Synopsis" id="synopsis-submit" onclick="setSynopsis();return false">
 
             <hr>
 

@@ -74,7 +74,7 @@ class PaymentsController extends Controller
                     'registration_timestamp' => $registrant->registrationTimestamp,
                 ]);
             }
-            return JSONResponse::response(200,'Successful Payment Update');
+            return view('payment_success');
         } catch (Exception $e) {
             Log::error("Payment Failed. ".$e->getMessage()." ".$e->getLine());
             return JSONResponse::response(500,"Payment Failed. ".$e->getMessage()." ".$e->getLine());

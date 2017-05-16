@@ -7,7 +7,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-    <title>Register for Rolling Reels</title>
+    <title>Login to Rolling Reels</title>
     <meta name="description" content="">  
     <meta name="author" content="">
 
@@ -56,45 +56,35 @@
             <span class="header-menu-icon"></span>
         </a> 
 
-        <nav id="menu-nav-wrap">
+		<nav id="menu-nav-wrap">
 
-            <a href="#0" class="close-button" title="close"><span>Close</span></a>	
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
 
-        <h3>Infinity.</h3>  
+	   	<h3>Rolling Reels</h3>  
 
-            <ul class="nav-list">
-                <li class="current"><a href="index.html" title="">Home</a></li>
-                <li><a href="index.html#about" title="">About</a></li>
-                <li><a href="index.html#services" title="">Services</a></li>
-                <li><a href="index.html#portfolio" title="">Works</a></li>
-                <li><a href="index.html#contact" title="">Contact</a></li>						
-            </ul>	
+            @if(Session::get('user_email'))
+            <h6 style="color: white">Welcome {{Session::get('user_email')}}</h6>
+            @endif
+			<ul class="nav-list">
+				<li class="current"><a href="/">Home</a></li>
+				<li><a href="/register">Register</a></li>
+                @if(Session::get('user_email'))
+				<li><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/api/logout">Logout</a></li>
+                @else
+                <li class="current"><a href="/login">Login</a></li>
+                @endif
+			</ul>	
+			<ul class="header-social-list">
+	         <li>
+	         	<a href="https://www.facebook.com/festember/"><i class="fa fa-facebook-square"></i></a>
+	         </li>
+	         <li>
+	         	<a href="https://twitter.com/festember"><i class="fa fa-twitter"></i></a>
+	         </li>
+	      </ul>		
 
-            <p class="sponsor-text">
-                Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
-                Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-                <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
-            </p>			
-
-            <ul class="header-social-list">
-             <li>
-                <a href="#"><i class="fa fa-facebook-square"></i></a>
-             </li>
-             <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-             </li>
-             <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-             </li>
-            <li>
-                <a href="#"><i class="fa fa-behance"></i></a>
-            </li>
-             <li>
-                <a href="#"><i class="fa fa-dribbble"></i></a>
-             </li>	         
-          </ul>		
-
-        </nav>  <!-- end #menu-nav-wrap -->
+		</nav>  <!-- end #menu-nav-wrap -->
 
     </header> <!-- end header -->  
 

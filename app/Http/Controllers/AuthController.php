@@ -62,10 +62,11 @@ class AuthController extends Controller
             $response = "You have been logged out";
             Log::info(Session::get('user_email')." logged out");
             Session::flush();
-            return JSONResponse::response($status_code,$response);
+            return redirect()->route('home');
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());
-            return JSONResponse::response(500, $e->getMessage());
+            Session::flush();
+            return redirect()->route('home');
         }
         
     }

@@ -42,6 +42,15 @@
             });
             $('#preloader-img-container').append('<img class="reel2" src="images/reel2.png" style="opacity: 0">');
             var leftPixels = window.innerWidth/2 - 45;
+            if (window.innerWidth < 768) {
+              $('.reel2').width(60);
+              $('.reel2').height(60);
+              $('#loader').width(60);
+              $('#loader').height(60);
+              $('.reel2').addClass('reel2-margin-small');
+              leftPixels += 25;
+            }
+            $('.reel2').addClass('reel2-margin');
             $('#preloader-img-container').animate({
                 left: leftPixels+'px',
                 top :'16%',
@@ -51,17 +60,38 @@
                     opacity: '1'
                 },600);
             },1600);
-
-		  //}); 
 	  	});
 	}; 
 
     $(window).resize(function () {
         var leftPixels = window.innerWidth/2 - 45;
+        var whval = 150;
+        if (window.innerWidth < 768) {
+            leftPixels += 25;
+            whval = 60;
+        } else {
+        }
         $('#preloader-img-container').animate({
             left: leftPixels+'px',
             top :'16%',
         },500);
+        $('#loader').animate({
+            width: whval+'px',
+            height: whval+'px'
+        },500);
+        $('.reel2').animate({
+            width: whval+'px',
+            height: whval+'px'
+        },500);
+        setTimeout(function () {
+            if (window.innerWidth < 768) {
+                $('.reel2').removeClass('reel2-margin');
+                $('.reel2').addClass('reel2-margin-small')
+            } else {
+                $('.reel2').addClass('reel2-margin')
+                $('.reel2').removeClass('reel2-margin-small');
+            }
+        },300);
     });
 
 
@@ -460,3 +490,38 @@
  
 
 })(jQuery);
+
+// Timeline
+(function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+})();

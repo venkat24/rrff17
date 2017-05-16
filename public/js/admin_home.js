@@ -8,7 +8,7 @@ function initMat() {
     });
 }
 
-function setMovieStatus() {
+function setMovieStatus(user_id) {
     if($('#movie').prop('checked')) 
         var movie_status = 1;
     else 
@@ -21,7 +21,8 @@ function setMovieStatus() {
         url: route,
         type: method,
         data: {
-            'movie_status' : movie_status
+            'movie_status' : movie_status,
+            'user_id' : user_id
         }
     });
 

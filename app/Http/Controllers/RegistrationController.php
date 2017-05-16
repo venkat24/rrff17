@@ -22,6 +22,8 @@ class RegistrationController extends Controller
                 'name'                 => 'required|string',
                 'email'                => 'required|string',
                 'phone'                => 'required|string',
+                'name2'                => '',
+                'phone2'               => '',
                 'password'             => 'required|string',
                 'confirm_password'     => 'required|string',
                 'g-recaptcha-response' => 'required|recaptcha',
@@ -45,6 +47,9 @@ class RegistrationController extends Controller
             $user_insert = User::insertGetId([
                 'email'    => $request->input('email'),
                 'name'     => $request->input('name'),
+                'name2'    => $request->input('name2'),
+                'phone'    => $request->input('phone'),
+                'phone2'   => $request->input('phone2'),
                 'password' => sha1($request->input('password')),
             ]);
             Submission::insert([

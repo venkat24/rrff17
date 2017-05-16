@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'home', function () {
     return view('welcome');
-});
+}]);
 
 Route::get('/register', function () {
     return view('register');
@@ -26,6 +26,8 @@ Route::get('/login', function () {
 Route::get('/admin', function () {
     return view('admin.login');
 });
+
+Route::get('/api/registrationwebhook','PaymentsController@handleTownscriptWebhook');
 
 Route::group(['middleware' => 'checkSessionAdmin'], function() {
     Route::get('/admin/getposter','SubmissionsController@getPosterAdmin');
@@ -40,12 +42,9 @@ Route::group(['middleware' => 'checkSession'], function() {
 });
 
 Route::group(['middleware' => 'setResponseHeaders'], function() {
-    // Payment Routes
-    Route::post('/api/registrationwebhook','PaymentsController@handleTownscriptWebhook');
-
     // Authentication Routes
     Route::post('/api/login','AuthController@authenticateUser');
-    Route::post('/api/logout','AuthController@logoutUser');
+    Route::get('/api/logout','AuthController@logoutUser');
 
     // Registration Routes
     Route::post('/api/register','RegistrationController@registerUser');

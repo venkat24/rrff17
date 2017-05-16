@@ -7,7 +7,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Infinity</title>
+	<title>Festember - Rolling Reels</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -20,6 +20,7 @@
    <link rel="stylesheet" href="css/base.css">
    <link rel="stylesheet" href="css/vendor.css">  
    <link rel="stylesheet" href="css/main.css">  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
    <!-- script
    ================================================== -->
@@ -54,15 +55,19 @@
 
 	   	<h3>Rolling Reels</h3>  
 
+            @if(Session::get('user_email'))
+            <h6 style="color: white">Welcome {{Session::get('user_email')}}</h6>
+            @endif
 			<ul class="nav-list">
-				<li><a href="/login" style="font-weight: bold; color: #aaaaaa;">Log In</a></li>
-				<li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-				<li><a class="smoothscroll" href="#about">About</a></li>
-				<li><a class="smoothscroll" href="#services">Services</a></li>
-				<li><a class="smoothscroll" href="#portfolio">Works</a></li>
-				<li><a class="smoothscroll" href="#contact">Contact</a></li>
+				<li class="current"><a href="/">Home</a></li>
+				<li><a href="/register">Register</a></li>
+                @if(Session::get('user_email'))
+				<li><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/api/logout">Logout</a></li>
+                @else
+                <li><a href="/login">Login</a></li>
+                @endif
 			</ul>	
-
 			<ul class="header-social-list">
 	         <li>
 	         	<a href="https://www.facebook.com/festember/"><i class="fa fa-facebook-square"></i></a>
@@ -92,23 +97,21 @@
                                     <!--<img class="reel" src="images/reel.png" width="200px" height="200px" id="main-reel">-->
                             </div>
                             <br>
-			  				<h3 style="font-size: 22pt;" class="rolling-font animate-intro"><span class="festember-main">Festember</span> Presents</h3>
+			  				<h3 style="font-size: 22pt;" class="rolling-font animate-intro"><span class="festember-main">Festember</span>,<div style="display:inline-block">NIT Trichy</div><br /> Presents</h3>
 				  			<h1 class="rolling-font animate-intro main-heading">
 							Rolling Reels <br>
-				  			</h1>	
+				  			</h1>
 
 				  			<div class="more animate-intro">
-				  				<a class="smoothscroll button stroke" href="#about">
-				  					Learn More
-				  				</a>
+                                <div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>
 				  				<a class="button stroke" href="/register">
                                     Register Now
 				  				</a>
-				  			</div>	
+				  			</div>
 
-			  		</div> <!-- end col-twelve --> 
-		   	</div> <!-- end row --> 
-		   </div> <!-- end home-content-tablecell --> 		   
+			  		</div> <!-- end col-twelve -->
+		   	</div> <!-- end row -->
+		   </div> <!-- end home-content-tablecell -->
 		</div> <!-- end home-content-table -->
 
 		<ul class="home-social-list">
@@ -141,7 +144,11 @@
 
 				<div class="intro">
 					<h3 class="animate-this">About</h3>
-                <img src="images/rrff.png" width="500px">
+                <img src="images/rrff.png" width="300px" style="display: inline-block; margin-right: 15px;">
+                <div style="display: inline-block">
+                 <p style="font-size: 1.3rem;" class="lead">Digital Media Partner</p>
+                 <img src="images/smile-settai.png" width="150px">
+                </div>
 	   			<p class="lead animate-this">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>	
 				</div>
 
@@ -168,58 +175,35 @@
    			
    	   </div> <!-- end col-full -->
    	</div> <!-- end row -->
-
-   	<div class="row services-content">
-
-   		<div class="services-list block-1-2 block-tab-full group">
-
-	      	<div class="bgrid service-item animate-this">	
-
-	            <div class="service-content">
-	            	<h3 class="h05">Branding</h3>
-
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>	         		
-	         	</div> 	         	 
-
-				</div> <!-- end bgrid -->
-
-				<div class="bgrid service-item animate-this">	
-
-	            <div class="service-content">	
-	            	<h3 class="h05">Movie Screening</h3>
-
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>	         		
-	            </div>	                          
-
-			   </div> <!-- end bgrid -->
-
-			   <div class="bgrid service-item animate-this">
-
-	            <div class="service-content">
-	            	<h3 class="h05">Workshop</h3>
-
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p>
-	            </div> 	            	               
-
-			   </div> <!-- end bgrid -->
-
-				<div class="bgrid service-item animate-this">
-
-	            <div class="service-content">
-	            	<h3 class="h05">Something Else</h3>
-
-		            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>	         		
-	            </div>                
-
-				</div> <!-- end bgrid -->			   
-
-	      </div> <!-- end services-list -->
-   		
-   	</div> <!-- end services-content -->   			
+<section class="timeline">
+  <ul>
+    <li>
+      <div>
+        Inauguration
+      </div>
+    </li>
+    <li>
+      <div>
+        Panel Discussion
+      </div>
+    </li>
+    <li>
+      <div>
+        Workshop
+      </div>
+    </li>
+    <li>
+      <div>
+        Movie Screening
+      </div>
+    </li>
+    <li>
+      <div>
+        Valediction and Prize Distribution
+      </div>
+    </li>
+  </ul>
+</section>
 
    </section> <!-- end services -->
 
@@ -293,6 +277,15 @@
                   </div>                                         
                </li> <!-- end slide -->
 
+               <li>
+               	<div class="testimonial-author">
+                    	<div class="author-info">
+							<img src="images/reel.png" width="100px" class="animate-reel reel-sub">
+							<p>We shall reveal more members of our panel shortly. Stay tuned!</p>
+                    	</div>
+                  </div>                                         
+               </li> <!-- end slide -->
+
             </ul> <!-- end slides -->
 
          </div> <!-- end testimonial-slider -->         
@@ -307,12 +300,10 @@
    	
    	<div class="intro-wrap">
 
-   		<div class="row narrow section-intro with-bottom-sep animate-this">
+   		<div class="row narrow section-intro with-bottom-sep">
 	   		<div class="col-twelve">
 	   			<h3>Showcase</h3>
 		   		<h1>Some Past Film Entries.</h1>
-		   		
-		   		<p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>	   			
 	   		</div>   		
 	   	</div> <!-- end row section-intro -->   		
 
@@ -323,7 +314,7 @@
    			<div id="folio-wrap" class="bricks-wrapper">					
 
    				<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/1973.jpg" data-sub-html="#01" > 	
+	               <div class="item-wrap" data-src="images/portfolio/1973.jpg" data-sub-html="#01" > 	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/1973.jpg" alt="Skaterboy">	                     
 	                     <div class="item-text">
@@ -343,7 +334,7 @@
 	        		</div> <!-- end folio-item -->
 
 	        		<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/amrita.jpg" data-sub-html="#02"> 	
+	               <div class="item-wrap" data-src="images/portfolio/amrita.jpg" data-sub-html="#02"> 	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/amrita.jpg" alt="Shutterbug">	                     
 	                     <div class="item-text">
@@ -363,7 +354,7 @@
 	        		</div> <!-- end folio-item -->
 
 	        		<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/ann.jpg" data-sub-html="#03" >   	
+	               <div class="item-wrap" data-src="images/portfolio/ann.jpg" data-sub-html="#03" >   	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/ann.jpg" alt="Explore">	                     
 	                     <div class="item-text">	                     		     					    
@@ -383,7 +374,7 @@
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/Kaduthasi.jpg"  data-sub-html="#04" >
+	               <div class="item-wrap"  data-src="images/portfolio/Kaduthasi.jpg"  data-sub-html="#04" >
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/Kaduthasi.jpg" alt="Minimalismo">	                     
 	                     <div class="item-text">	     					    
@@ -403,7 +394,7 @@
 	        		</div> <!-- end folio-item -->
 
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/SAVE.jpg" data-sub-html="#05" >  	
+	               <div class="item-wrap" data-src="images/portfolio/SAVE.jpg" data-sub-html="#05" >  	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/SAVE.jpg" alt="Bicycle">	                     
 	                     <div class="item-text">	     					    
@@ -423,7 +414,7 @@
 	        		</div> <!-- end folio-item -->
 	           
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this" data-src="images/portfolio/Rishwat.jpg" data-sub-html="#06">     	
+	               <div class="item-wrap" data-src="images/portfolio/Rishwat.jpg" data-sub-html="#06">     	
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/Rishwat.jpg" alt="Salad">	                     
 	                     <div class="item-text">	     					    
@@ -443,7 +434,7 @@
 	        		</div> <!-- end folio-item -->   				
 	           
 					<div class="brick folio-item">
-	               <div class="item-wrap animate-this"  data-src="images/portfolio/Duddu.jpg"  data-sub-html="#07">
+	               <div class="item-wrap"  data-src="images/portfolio/Duddu.jpg"  data-sub-html="#07">
 	                  <a href="#" class="overlay">
 	                  	<img src="images/portfolio/Duddu.jpg" alt="Salad">	                     
 	                     <div class="item-text">	     					    
@@ -478,8 +469,6 @@
    		<div class="col-twelve">
    			<h3>Contact</h3>
    			<h1>Get In Touch.</h1>
-
-   			<p class="lead">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
    		</div> 
    	</div> <!-- end section-intro -->
 
@@ -489,24 +478,28 @@
 	        <br /><strong>Deepan Thiruppathy</strong>
 	        <br />Head, RRFF 2017
 	        <br />for Event queries
+	        <br />+91 9500141933
         </div>
 
         <div class="profile-container"><img src="images/avatars/Hanisha_Rajan.jpg" class="profile-img">
 	        <br /><strong>Hanisha Rajan</strong>
 	        <br />Head, RRFF 2017
 	        <br />for Workshop queries
+	        <br />+91 9940640564
         </div>
 
         <div class="profile-container"><img src="images/avatars/Varshini_Bhaskar.jpg" class="profile-img">
 	        <br /><strong>Varshini Bhaskar</strong>
 	        <br />Media Head, Festember 2017
 	        <br />for Media collaborations
+	        <br />+91 9043846358
         </div>
 
         <div class="profile-container"><img src="images/avatars/Aakash_Bhatt.jpg" class="profile-img">
 	        <br /><strong>Aakash Bhatt</strong>
 	        <br />Marketing Head, Festember 2017
 	        <br />for Branding queries
+	        <br />+91 9629414669
         </div>
 
 
@@ -518,63 +511,9 @@
 	<!-- footer
    ================================================== -->
 	<footer>
-     	<div class="footer-main">
-
-   		<div class="row">  
-
-	      	<div class="col-five tab-full footer-about">       
-
-	            <h4 class="h05">Infinity.</h4>
-
-	            <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.</p>	            
-
-		      </div> <!-- end footer-about -->
-
-	      	<div class="col-three tab-full footer-social">
-
-	      		<h4 class="h05">Follow Us.</h4>
-
-	      		<ul class="list-links">
-	      			<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Instagram</a></li>
-						<li><a href="#">Behance</a></li>
-						<li><a href="#">Dribble</a></li>						
-					</ul>
-
-	      	</div> <!-- end footer-social -->  
-
-	      	<div class="col-four tab-full footer-subscribe end">
-
-	      		<h4 class="h05">Get Notified.</h4>
-
-	      		<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa.</p>
-
-	      		<div class="subscribe-form">
-	      	
-	      			<form id="mc-form" class="group" novalidate="true">
-
-							<input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email" required=""> 
-	   		
-			   			<!-- <input type="submit" name="subscribe" > -->
-			   			<button><i class="icon-mail"></i></button>
-		   	
-		   				<label for="mc-email" class="subscribe-message"></label>
-			
-						</form>
-
-	      		</div>
-	      	           	
-	      	</div> <!-- end footer-subscribe -->      	    
-
-	      </div> <!-- end row -->
-
-   	</div> <!-- end footer-main -->
-
    	<div class="footer-bottom">
 
       	<div class="row">
-
       		<div class="col-twelve">
 	      		<div class="copyright">
 		         	<span>© Festember 2017</span> 
