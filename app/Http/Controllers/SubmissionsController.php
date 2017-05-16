@@ -165,7 +165,7 @@ class SubmissionsController extends Controller
         if($validator->fails()) {
             $message = $validator->errors()->all();
             Log::info($validator->errors()->all());
-            return JSONResponse::response(200,'Submission Failed. Please Try Again. Ensure the filesize of the image is less than 3Mb.');
+            return 'Submission Failed. Please Try Again. Ensure the filesize of the image is less than 3Mb.';
         }
 
         $user_email = Session::get('user_email');
@@ -185,7 +185,7 @@ class SubmissionsController extends Controller
 
         $image->move(storage_path('posters'), $filename);
 
-        return 'Submitted Successfully';
+        return redirect('dashboard');
     }
     
     public function setMovieStatus(Request $request) {

@@ -126,12 +126,12 @@
                               <td id="poster_submitted" style="font-size: 20pt"></td>					    
                            </tr>
                            <tr>
-                              <td>Registration Fee</td>
-                              <td id="payment_submitted" style="font-size: 20pt"></td>
-                           </tr>
-                           <tr>
                               <td>Movie</td>
                               <td id="movie_submitted" style="font-size: 20pt"></td>	    
+                           </tr>
+                           <tr>
+                              <td>Registration Fee</td>
+                              <td id="payment_submitted" style="font-size: 20pt"></td>
                            </tr>
                         </tbody>
                    </table>
@@ -185,19 +185,18 @@
 
             <br><br>
 
+            <h2>Movie Submission</h2>
+
+            <p class="lead">Movie submission will be through FilmFreeway. Follow the link below and submit your movie on FilmFreeway, and we will verify your submission within 24 hours.</p><p><a href="https://filmfreeway.com/festival/RollingReels">https://filmfreeway.com/festival/RollingReels<a></p>
+            <hr>
+
+            <br><br>
+
             <h2>Registration Fee</h2>
 
             <p class="lead">Click the button below to purchase your spot for a submission to Rolling Reels!</p>
             <p class="lead">Ensure that you use the same Email ID for the payment that you used for registering with RRFF. Otherwise, we cannot verify your payment!</p>
             <button  class="button-primary" onclick="popup('rolling-reels-film-festival-404140');" class="tsbutton">Pay Now</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
-
-            <hr>
-
-            <br><br>
-
-            <h2>Movie Submission</h2>
-
-            <p class="lead">Movie submission will be through FilmFreeway. Follow the link below and submit your movie on FilmFreeway, and we will verify your submission within 24 hours.</p><p><a href="https://filmfreeway.com/festival/RollingReels">https://filmfreeway.com/festival/RollingReels<a></p>
         </div>
 
         <div class="col-twelve tab-full">
