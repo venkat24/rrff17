@@ -53,7 +53,7 @@
             $('.reel2').addClass('reel2-margin');
             $('#preloader-img-container').animate({
                 left: leftPixels+'px',
-                top :'16%',
+                top :'13%',
             },2000);
             setTimeout(function() {
                 $('.reel2').animate({
@@ -73,7 +73,7 @@
         }
         $('#preloader-img-container').animate({
             left: leftPixels+'px',
-            top :'16%',
+            top :'13%',
         },500);
         $('#loader').animate({
             width: whval+'px',

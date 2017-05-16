@@ -101,6 +101,7 @@
 				  			<h1 class="rolling-font animate-intro main-heading">
 							Rolling Reels <br>
 				  			</h1>
+                            <h3 class="animate-intro" style="color:white; font-size: 1.5em;text-shadow:2px 2px 0px red;">19th August</h3>
 
 				  			<div class="more animate-intro">
                                 <div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>
@@ -149,7 +150,7 @@
                  <p style="font-size: 1.3rem;" class="lead">Digital Media Partner</p>
                  <img src="images/smile-settai.png" width="150px">
                 </div>
-	   			<p class="lead animate-this">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>	
+	   			<p class="lead animate-this">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>
 				</div>
 
    		</div> <!-- end col-full  -->
