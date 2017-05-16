@@ -251,7 +251,7 @@
                     		Sreekar Prasad
                     		<span>Film Editor</span>
 							<br>
-							<p>Mr Sreekar Prasad is a Nation Award winning editor, known for Telugu, Malayalam, and Tamil films including <em>Okkandu, Kannathil Muthamittal, Pazhassi Raja, Kaththi, Pizza, Naanum Rowdy Thaan,</em> and recently, <em>Kaatru Veliyidai.</em> Mr Prasad will be condcuting an editing workshop this Rolling Reels.</p>
+							<p>Mr Sreekar Prasad is a Nation Award winning editor, known for Telugu, Malayalam, and Tamil films including <em>Okkandu, Kannathil Muthamittal, Pazhassi Raja, Kaththi, Pizza, Naanum Rowdy Thaan,</em> and recently, <em>Kaatru Veliyidai.</em> Mr Prasad will be conducting an editing workshop this Rolling Reels.</p>
                     	</div>
 <!-- 							<div class="content">
 							  <div class="buttons">
