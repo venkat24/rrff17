@@ -148,12 +148,13 @@
                   </div>
                   <div>
                         <label for="password">Password*</label>
-                        <input required class="full-width" type="password" id="password" name="password">
+                        <input required class="full-width" type="password" id="password" name="password" onchange="confirmPassword();">
                   </div>
                   <div>
                         <label for="confirm_password">Confirm Password*</label>
-                        <input required class="full-width" type="password" id="confirm_password" name="confirm_password">
+                        <input required class="full-width" type="password" id="confirm_password" name="confirm_password" onchange="confirmPassword();">
                   </div>
+                  <div id="pwconf" style="display:none">Passwords Do Not Match</div>
                   <h3>Member 2</h3>
                   <div>
                         <label for="name">Name</label>
@@ -211,6 +212,7 @@
    <script src="js/jquery-2.1.3.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
+   <script src="js/register.js"></script>
 
 </body>
 

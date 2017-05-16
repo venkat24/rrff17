@@ -32,16 +32,16 @@ class RegistrationController extends Controller
             if($validator->fails()) {
                 $message = $validator->errors()->all();
                 Log::error($message);
-                return JSONResponse::response(400, $message);
+                return redirect('register');
             }
             if($request->input('password') !== $request->input('confirm_password')) {
-                return JSONResponse::response(400, "Passwords do not match");
+                return redirect('register');
             }
 
             $email_check = User::where('email','=',$request->input('email'))->get();
             if(!$email_check->isEmpty()) {
                 $message = "Email Address exists";
-                return JSONResponse::response(400, $message);
+                return redirect('register');
             }
 
             $user_insert = User::insertGetId([
@@ -55,7 +55,7 @@ class RegistrationController extends Controller
             Submission::insert([
                 'user_id' => $user_insert,
             ]);
-            return JSONResponse::response(200, "Registration Successful");
+            return redirect('login');
 
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());
