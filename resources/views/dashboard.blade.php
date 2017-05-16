@@ -187,7 +187,7 @@
 
             <h2>Movie Submission</h2>
 
-            <p class="lead">Movie submission will be through FilmFreeway. Follow the link below and submit your movie on FilmFreeway, and we will verify your submission within 24 hours.</p><p><a href="https://filmfreeway.com/festival/RollingReels">https://filmfreeway.com/festival/RollingReels<a></p>
+            <p class="lead">Movie submission will be through ShortFundly. Follow the link below and submit your movie on ShortFundly, and we will verify your submission within 24 hours.</p><p><a href="https://www.shortfundly.com/viewfestival/rolling-reels-short-film-festival/78/utm_link/QWR1b0pSQk5oeDBXckI4dExYTzhKQT09/">https://www.shortfundly.com/viewfestival/rolling-reels-short-film-festival/78/utm_link/QWR1b0pSQk5oeDBXckI4dExYTzhKQT09/<a></p>
             <hr>
 
             <br><br>

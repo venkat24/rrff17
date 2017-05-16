@@ -13,8 +13,8 @@ use Exception;
 
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
-
 use Sangria\JSONResponse;
+
 
 use App\Models\User;
 use App\Models\Payment;
@@ -47,11 +47,34 @@ class PaymentsController extends Controller
     public function handleTownscriptWebhook(Request $request) {
         try {
             $data = PaymentsController::refreshPaymentsList($request);
-            if($data == -1) {
-                return JSONResponse::response(400, 'TownScript Request Failed');
-            }
             Payment::truncate();
-            foreach($data as $registrant) {
+            if(is_array($data)){
+                foreach($data as $registrant) {
+                    $email = $registrant->userEmailId;
+                    $user_id = User::where('email','=',$email)
+                                   ->pluck('id');
+                    if(!$user_id){
+                        $user_id = -1;
+                    } else {
+                        Submission::where('user_id','=',$user_id)
+                                  ->update([
+                                      'payment_submitted' => 1
+                                  ]);
+                    }
+                    Payment::insert([
+                        'user_id'                => $user_id,
+                        'order_id'               => $registrant->uniqueOrderId,
+                        'user_name'              => $registrant->userName,
+                        'user_email'             => $registrant->userEmailId,
+                        'ticket_name'            => $registrant->ticketName,
+                        'event_code'             => $registrant->eventCode,
+                        'ticket_price'           => $registrant->totalTicketAmount,
+                        'registration_timestamp' => $registrant->registrationTimestamp,
+                    ]);
+                }
+                return view('payment_success');
+            } else {
+                $registrant = $data;
                 $email = $registrant->userEmailId;
                 $user_id = User::where('email','=',$email)
                                ->pluck('id');
@@ -73,8 +96,8 @@ class PaymentsController extends Controller
                     'ticket_price'           => $registrant->totalTicketAmount,
                     'registration_timestamp' => $registrant->registrationTimestamp,
                 ]);
+                return view('payment_success');
             }
-            return view('payment_success');
         } catch (Exception $e) {
             Log::error("Payment Failed. ".$e->getMessage()." ".$e->getLine());
             return JSONResponse::response(500,"Payment Failed. ".$e->getMessage()." ".$e->getLine());
