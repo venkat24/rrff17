@@ -173,7 +173,7 @@
    				<h3>Events</h3>
    			   <h1>Action at Rolling Reels.</h1>
    			
-   			   <p class="lead">Rolling Reels Film Festival (RRFF) is an event held every year as a part of Festember, the annual cultural fest of NIT Trichy. Up until 2014, Festember did not sport any event related to movie-making. With a hefty increase in new, young film-makers taking the film industry by storm, it would only seem sensible to instate a platform which would act as a springboard for young talents. This lead to the incubation of RRFF - the first edition of the short film festival was held in September 2015, and was a success through and through</p>
+   			   <p class="lead">Rolling Reels Film Festival (RRFF) is an event held every year as a part of Festember, the annual cultural fest of NIT Trichy. Up until 2014, Festember did not sport any event related to movie-making. With a hefty increase in new, young film-makers taking the film industry by storm, it would only seem sensible to instate a platform which would act as a springboard for young talents. This led to the incubation of RRFF - the first edition of the short film festival was held in September 2015, and was a success through and through</p>
    			
    	   </div> <!-- end col-full -->
    	</div> <!-- end row -->
@@ -215,7 +215,7 @@
 
    	<div class="row">
    		<div class="col-twelve">
-   			<h2 class="animate-this">Out Esteemed Panel of Judges</h2>
+   			<h2 class="animate-this">Our Esteemed Panel of Judges</h2>
    		</div>   		
    	</div>   	
 
