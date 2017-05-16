@@ -2,6 +2,7 @@
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!-- Venkatraman Srikanth B| -->
 <head>
 
    <!--- basic page needs
@@ -150,7 +151,7 @@
                  <p style="font-size: 1.3rem;" class="lead">Digital Media Partner</p>
                  <img src="images/smile-settai.png" width="150px">
                 </div>
-	   			<p class="lead animate-this">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>
+	   			<p class="lead animate-this" style="font-size:2em">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>
 				</div>
 
    		</div> <!-- end col-full  -->
@@ -233,11 +234,11 @@
 							<br>
 						    <p>Mr R Velraj is the blockbuster director behind Kollywood box office smashers like <em>Velai Illa Pattadhari, Thanga Magan. </em>He also worked on other Tamil, Malayalam and Hindi Films, including <em>Aadukalam, Kandahar, Polladhavan, and Engeyun Eppodhum.</em></p> 
 <br>
-							<div class="content">
+<!-- 							<div class="content">
 							  <div class="buttons">
 								<div id="one" class="button button-full-width" data-num="1">Read More</div>
 							  </div>
-							</div>
+							</div> -->
                     	</div>
                   </div>
 
@@ -252,11 +253,11 @@
 							<br>
 							<p>Mr Sreekar Prasad is a Nation Award winning editor, known for Telugu, Malayalam, and Tamil films including <em>Okkandu, Kannathil Muthamittal, Pazhassi Raja, Kaththi, Pizza, Naanum Rowdy Thaan,</em> and recently, <em>Kaatru Veliyidai.</em> Mr Prasad will be condcuting an editing workshop this Rolling Reels.</p>
                     	</div>
-							<div class="content">
+<!-- 							<div class="content">
 							  <div class="buttons">
 								<div id="one" class="button" data-num="2">Read More</div>
 							  </div>
-							</div>
+							</div> -->
                   </div>                                         
 
                </li> <!-- end slide -->
@@ -269,11 +270,11 @@
                     		<span>Actor / Art Director</span>
 							<br>
 							<p>Mr DRK Kiran is easily recognizable from his roles in <em>Anegan</em> and <em>Ko</em>, and he also did the Art Direction for these movies, among several other blockbusters, including <em>Kavan</em> and <em>Naanum Rowdy Thaan. </em>We are delighted to associate with Kiran Sir this Rolling Reels!</p>
-							<div class="content">
+		<!-- 					<div class="content">
 							  <div class="buttons">
 								<div id="one" class="button" data-num="3">Read More</div>
 							  </div>
-							</div>
+							</div> -->
                     	</div>
                   </div>                                         
                </li> <!-- end slide -->
@@ -518,7 +519,7 @@
       		<div class="col-twelve">
 	      		<div class="copyright">
 		         	<span>© Festember 2017</span> 
-                    <span>Made with ♥ by <a href="http://deltaforce.club" target="_blank">Delta Force</a></span>
+                    <span>Made with <a href="http://venkatraman.me">♥</a> by <a href="http://deltaforce.club" target="_blank">Delta Force</a></span>
 		         </div>		               
 	      	</div>
 
@@ -633,5 +634,4 @@ and for us!
    <script src="js/main.js"></script>
 
 </body>
-
 </html>

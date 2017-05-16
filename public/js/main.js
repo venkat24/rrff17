@@ -453,13 +453,12 @@
     // Modals
     $('.button').click(function(){
         var buttonId = $(this).attr('data-num');
-		console.log(buttonId);
         $("[data-container-num="+buttonId+"]").removeAttr('class').addClass("one");
         $('body').addClass('modal-active');
 
     })
 
-    $('#modal-container').click(function(){
+    $('[data-container-num]').click(function(){
         $(this).addClass('out');
         $('body').removeClass('modal-active');
 
