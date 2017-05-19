@@ -63,5 +63,6 @@ Route::group(['middleware' => ['checkSessionJSON','setResponseHeaders']], functi
     Route::get('/api/getsubmissionstatus','SubmissionsController@getCurrentStatus');
     Route::post('/api/setsynopsis','SubmissionsController@setSynopsis');
     Route::post('/api/settitle','SubmissionsController@setTitle');
+    Route::post('/api/setmovielink','SubmissionsController@setMovieLink');
     Route::post('/api/uploadposter','SubmissionsController@setPoster');
 });

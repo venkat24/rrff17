@@ -158,6 +158,37 @@ class SubmissionsController extends Controller
         }
     }
 
+    /**
+     * Function to set the movie link of a submission
+     */
+    public function setMovieLink(Request $request) {
+        try {
+            $validator = Validator::make($request->all(), [
+                'movie_link' => 'required|string'
+            ]);
+
+            if($validator->fails()) {
+                $message = "Invalid parameters";
+                return JSONResponse::response(400, $message);
+            }
+
+            $user_email = Session::get('user_email');
+            $user_id    = User::where('email','=',$user_email)->first();
+
+            Submission::where('user_id','=',$user_id->id)
+                ->update([
+                    'movie_link' => $request->input('movie_link'),
+                    'movie_submitted' => 1
+                ]);
+
+            return JSONResponse::response(200, "Movie Link set successfully");
+
+        } catch (Exception $e) {
+            Log::error($e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500, $e->getMessage());
+        }
+    }
+
     public function setPoster(Request $request) {
         $validator = Validator::make($request->all(), [
             'poster' => 'required|mimes:jpeg,png'

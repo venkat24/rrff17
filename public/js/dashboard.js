@@ -37,6 +37,7 @@ function getSubmissionStatus() {
             setMark('title_submitted',data.message);
             $('#synopsis').val(data.message.synopsis);
             $('#title').val(data.message.title);
+            $('#movie-link').val(data.message.movie_link);
             if(data.message.poster_submitted == '1') {
                 $('#poster-image-container').append('<img src="/api/getposter" width="300px">');
             }
@@ -98,6 +99,34 @@ function setSynopsis() {
             alert('Synopsis Set Successfully');
 		} else {
 			alert('Synopsis Set Failed');
+            console.log(data.message);
+		}
+	});
+}
+
+function setMovieLink() {
+    $('#movie-link-submit').prop("disabled",true);
+    $('#movie-link-submit').removeClass('button-primary');
+    $('#movie-link-submit').addClass('button');
+	var route = '/api/setmovielink';
+	var method = 'POST';
+
+    var request = $.ajax({
+        url: route,
+        type: method,
+        data: {
+            'movie_link' : $('#movie-link').val()
+        }
+    });
+
+	request.done(function(data){
+		$('#movie-link-submit').prop("disabled",false);
+        $('#movie-link-submit').removeClass('button');
+        $('#movie-link-submit').addClass('button-primary');
+		if(data.status_code == 200) {
+            alert('Movie Link Set Successfully');
+		} else {
+			alert('Movie Link Set Failed');
             console.log(data.message);
 		}
 	});

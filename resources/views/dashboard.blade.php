@@ -149,7 +149,7 @@
             <h2>Submit Title</h2>
 
             <p class="lead">Enter your movie's title here.</p>
-            <input type=text name="title" id="title" class="full-width" placehoder="Title">
+            <input type="text" text name="title" id="title" class="full-width" placehoder="Title">
             <br>
             <input class="button-primary" type="submit" value="Set Title" id="title-submit" onclick="setTitle();return false;">
 
@@ -187,7 +187,12 @@
 
             <h2>Movie Submission</h2>
 
-            <p class="lead">Movie submission will be through FilmFreeway. Follow the link below and submit your movie on FilmFreeway, and we will verify your submission within 24 hours.</p><p><a href="https://filmfreeway.com/festival/RollingReels"><a>https://filmfreeway.com/festival/RollingReels</p>
+			<p class="lead">Movies can be submitted by uploading them to YouTube or Google Drive, and sharing the link with us in the box below. </p>
+			<p class="lead">Once you sumbit the link, your movie will be verified by us within 24 hours.</p>
+			<p>Note that you can set your YouTube video to Unlisted, and the link will not be public.</p>
+            <input type="text" name="movie-link" id="movie-link" class="full-width" placehoder="Title">
+            <input class="button-primary" type="submit" value="Set Movie Link" id="movie-link-submit" onclick="setMovieLink();return false">
+
             <hr>
 
             <br><br>

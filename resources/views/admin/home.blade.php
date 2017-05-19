@@ -18,6 +18,7 @@
                         <p style="padding: 10px 30px;"><strong>Film Name : </strong>{{$submission->title}}</p>
                         <p style="padding: 10px 30px;"><strong>Email : </strong>{{$submission->email}}</p>
                         <p style="padding: 10px 30px;"><strong>Phone Number : </strong>{{$submission->phone}}</p>
+                        <p style="padding: 10px 30px;"><strong>Movie Link : </strong>{{$submission->movie_link}}</p>
                     </div>
                     @if($submission->poster_submitted)
                     <div class="col s3 center-align">
