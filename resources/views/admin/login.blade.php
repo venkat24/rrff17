@@ -84,9 +84,6 @@
     }
   </style>
 </head>
-        <script type="text/javascript">
-           var SITE_BASE_URL = "{{ url(env('SITE_BASE_URL'))}}";
-        </script>
 <body>
   <div class="section"></div>
   <main>
