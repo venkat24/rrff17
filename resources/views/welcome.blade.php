@@ -102,7 +102,7 @@
 				  			<h1 class="rolling-font animate-intro main-heading">
 							Rolling Reels <br>
 				  			</h1>
-                            <h3 class="animate-intro" style="color:white; font-size: 1.5em;text-shadow:2px 2px 0px red;">19th August, Chennai</h3>
+                            <h3 class="animate-intro" style="color:white; font-size: 1.5em;text-shadow:2px 2px 0px red;">20th August, Chennai</h3>
 
 				  			<div class="more animate-intro">
                                 <div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>
