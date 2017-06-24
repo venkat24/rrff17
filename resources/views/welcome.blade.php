@@ -103,16 +103,16 @@
 							Rolling Reels <br>
 				  			</h1>
                             <h3 class="animate-intro" style="color:white; font-size: 1.5em;text-shadow:2px 2px 0px red;">20th August, Chennai</h3>
-                            <h3 class="animate-intro" style="color:white; font-size: 2.0em;text-shadow:2px 2px 0px red;">Prize Money   &#8377; 1,00,000/-</h3>
-                            <h3 class="animate-intro" style="color:white; font-size: 2.0em;text-shadow:2px 2px 0px red;">Registration fee   &#8377; 600/-</h3>
+                            <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Prize Money <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 1,00,000/-</div></h3>
+                            <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Registration fee <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 600/-</div></h3>
 
-				  			<div class="more animate-intro">
-                                <div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>
+				  			<div class="more animate-intro" style="margin-top: -0.3em;">
+							  <div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>
 				  				<a class="button stroke" href="/register">
                                     Register Now
 				  				</a>
 				  			</div>
-				  			<h3 class="animate-intro" style="color:white; font-size: 2.0em;text-shadow:2px 2px 0px red;">Early Bird Deadline - June 30th</h3>
+				  			<h3 class="animate-intro" style="color:white; font-size: 0.8em; margin-top: -0.2em">Early Bird Deadline - June 30th</h3>
 			  		</div> <!-- end col-twelve -->
 		   	</div> <!-- end row -->
 		   </div> <!-- end home-content-tablecell -->
