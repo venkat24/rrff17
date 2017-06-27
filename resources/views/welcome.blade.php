@@ -102,7 +102,8 @@
 				  			<h1 class="rolling-font animate-intro main-heading">
 							Rolling Reels <br>
 				  			</h1>
-                            <h3 class="animate-intro" style="color:white; font-size: 1.5em;text-shadow:2px 2px 0px red;">20th August, Chennai</h3>
+                            <h3 class="animate-intro" style="color:white; margin-top: -15px;font-size: 1.5em;text-shadow:2px 2px 0px red;">20th August</h3>
+                            <h4 class="animate-intro" style="color:white; margin-top: -15px;text-shadow:2px 2px 0px #C451B4;">LV Prasad Film and TV Academy, Chennai</h4>
                             <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Prize Money <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 1,00,000/-</div></h3>
                             <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Registration fee <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 600/-</div></h3>
 
@@ -154,7 +155,13 @@
                  <img src="images/smile-settai.png" width="150px">
                 </div>
 	   			<p class="lead animate-this" style="font-size:2em">South India's largest student run short film festival is Rolling your way! Register now, and be a part of Rolling Reels Film Festival, 2017</p>
-				</div>
+   		<h3>Event Location</h3>
+   		<h1></h1>
+   			
+		  <iframe style="width: 80%; height: 300px" src="https://www.google.com/maps/embed/v1/search?q=L.V.Prasad%20Film%20%26%20TV%20Academy%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India
+    		      &zoom=17
+    		      &key=AIzaSyCAQUr8ZIP6il4w3TdvH77a4glOpuz9r3I">
+    		  </iframe>
 
    		</div> <!-- end col-full  -->
    	</div> <!-- end about-wrap  -->
@@ -463,8 +470,6 @@
 <br /><br />
    </section>  <!-- end portfolio -->
 
-	<!-- contact
-   ================================================== -->
    <section id="contact">
 
       <div class="overlay"></div>
