@@ -113,7 +113,7 @@
                                     Register Now
 				  				</a>
 				  			</div>
-				  			<h3 class="animate-intro" style="color:white; font-size: 0.8em; margin-top: -0.2em">Early Bird Deadline - June 30th</h3>
+				  			<h3 class="animate-intro" style="color:white; font-size: 0.8em; margin-top: -0.2em">Early Bird Deadline - July 15th</h3>
 			  		</div> <!-- end col-twelve -->
 		   	</div> <!-- end row -->
 		   </div> <!-- end home-content-tablecell -->
