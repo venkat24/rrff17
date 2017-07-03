@@ -262,11 +262,6 @@
 							<br>
 							<p>Mr Sreekar Prasad is a National Award winning editor, known for Telugu, Malayalam, and Tamil films including <em>Okkandu, Kannathil Muthamittal, Pazhassi Raja, Kaththi, Pizza, Naanum Rowdy Thaan,</em> and recently, <em>Kaatru Veliyidai.</em> Mr Prasad will be conducting a workshop on Movie Editing this Rolling Reels.</p>
                     	</div>
-<!-- 							<div class="content">
-							  <div class="buttons">
-								<div id="one" class="button" data-num="2">Read More</div>
-							  </div>
-							</div> -->
                   </div>                                         
 
                </li> <!-- end slide -->
@@ -278,12 +273,45 @@
                     		DRK Kiran
                     		<span>Actor / Art Director</span>
 							<br>
-							<p>Mr DRK Kiran is easily recognizable from his roles in <em>Anegan</em> and <em>Ko</em>, and he also did the Art Direction for these movies, among several other blockbusters, including <em>Kavan</em> and <em>Naanum Rowdy Thaan. </em>We are delighted to associate with Kiran Sir this Rolling Reels!</p>
-		<!-- 					<div class="content">
-							  <div class="buttons">
-								<div id="one" class="button" data-num="3">Read More</div>
-							  </div>
-							</div> -->
+							<p>Mr DRK Kiran is easily recognizable from his roles in <em>Anegan</em> and <em>Ko</em>, and he also did the Art Direction for these movies, among several other blockbusters, including <em>Kavan</em> and <em>Naanum Rowdy Thaan. </em></p>
+                    	</div>
+                  </div>                                         
+               </li> <!-- end slide -->
+
+               <li>
+               	<div class="testimonial-author">
+                    	<img src="images/avatars/user-05.jpg" alt="Author image">
+                    	<div class="author-info">
+                    		Ravi K Chandran
+                    		<span>Cinematographer</span>
+							<br>
+							<p>Ravi K Chandran is an award-winning cinematographer who has worked with both the Tamil and Hindi film industries in hits like <em>Boys, Black, Kandukondain Kandukondain</em> to name a few.</p>
+                    	</div>
+                  </div>                                         
+               </li> <!-- end slide -->
+
+
+               <li>
+               	<div class="testimonial-author">
+                    	<img src="images/avatars/user-06.jpg" alt="Author image">
+                    	<div class="author-info">
+                    		Praveen Anthony
+                    		<span>Film Editor</span>
+							<br>
+							<p>Praveen Anthony is a venerable and respected name in the film spheres, known for his exceptional editing skills in movies like <em>Kidaari</em> and <em>Rajathanthiram</em>. He has also worked as an associate editor in movies like <em>Ko</em> and <em>Vaanam.</em> </p>
+                    	</div>
+                  </div>                                         
+               </li> <!-- end slide -->
+
+
+               <li>
+               	<div class="testimonial-author">
+                    	<img src="images/avatars/user-07.jpg" alt="Author image">
+                    	<div class="author-info">
+                    		Santosh Sivan
+                    		<span>Cinematographer</span>
+							<br>
+							<p>Santhosh Sivan, a cinematographer with experience as a producer, director and an actor, is also the recipient of eleven national awards and the highly esteemed Civilian Honour <em>Padma Shri</em>.</p>
                     	</div>
                   </div>                                         
                </li> <!-- end slide -->
