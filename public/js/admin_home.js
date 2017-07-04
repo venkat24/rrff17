@@ -9,7 +9,7 @@ function initMat() {
 }
 
 function setMovieStatus(user_id) {
-    if($('#movie').prop('checked')) 
+    if($('#movie_'+user_id).prop('checked')) 
         var movie_status = 1;
     else 
         var movie_status = 0;
