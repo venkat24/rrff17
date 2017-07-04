@@ -19,6 +19,10 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/register_success', function () {
+    return view('register_success');
+});
+
 Route::get('/login', function () {
     return view('login');
 });

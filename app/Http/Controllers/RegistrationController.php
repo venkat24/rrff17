@@ -55,7 +55,7 @@ class RegistrationController extends Controller
             Submission::insert([
                 'user_id' => $user_insert,
             ]);
-            return redirect('login');
+            return redirect('register_success');
 
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());
