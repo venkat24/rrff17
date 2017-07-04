@@ -158,11 +158,11 @@
                   <h3>Member 2</h3>
                   <div>
                         <label for="name">Name</label>
-                        <input class="full-width" type="text" id="name" name="name">
+                        <input class="full-width" type="text" id="name2" name="name2">
                   </div>
                   <div>
                         <label for="phone">Phone Number</label>
-                        <input class="full-width" type="text" id="phone" name="phone">
+                        <input class="full-width" type="text" id="phone2" name="phone2">
                   </div>
                   {!! Recaptcha::render() !!}
                   <br>
