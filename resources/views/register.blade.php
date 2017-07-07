@@ -103,7 +103,7 @@
             <p> Ensure that you read through all the rules very carefully and and see that all conditions are met before making a submisison</p>
 
 			<div class="rules-text" style="text-align: left">
-			<p >1. All entries submitted should <strong>not exceed 16 mins</strong> in duration including all titles and credits.
+			<p >1. All entries submitted should <strong>not exceed 20 mins</strong> in duration including all titles and credits.
 			<p >2. The film should be a <strong>work of fiction</strong>.
 			<p >3. <strong>Minimum acceptable resolution of the submitted film is 720p.</strong>
 			<p >4. Entries are open for participants from across the globe.
