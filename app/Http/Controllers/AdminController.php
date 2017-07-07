@@ -62,7 +62,11 @@ class AdminController extends Controller
         try {
             $submissions = Submission::join('users','users.id','=','submissions.user_id')
                                     ->get();
-            return view('admin.home',['submissions' => $submissions]);
+            return view('admin.home',[
+                'submissions' => $submissions,
+                'count'       => 1,
+                'tot_count'   => Submission::count()
+            ]);
         } catch (Exception $e) {
             $response = $e->getMessage()." ".$e->getLine();
             return $response;

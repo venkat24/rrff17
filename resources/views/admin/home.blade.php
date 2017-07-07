@@ -4,13 +4,14 @@
 	<br />
 	<div class="container">
         <h2 style="text-align: center">Registrations</h2>
+        <h6 style="text-align: center">{{$tot_count}} Total</h6>
 		<div class="valgn-wrapper" >
 			<ul class="collapsible popout" data-collapsible="accordion">
                 @foreach ($submissions as $submission)
                 <li>
                   <div class="collapsible-header" style="clear: both">
-                    <p style="font-size:14pt;float:left"><em>{{$submission->title}}</em><p>
-                    <p style="font-size:14pt;float:right">{{$submission->name}}<p>
+                    <p style="font-size:11pt;float:left">{{$count++}} - <em>{{$submission->title}}</em><p>
+                    <p style="font-size:11pt;float:right">{{$submission->name}}<p>
                   </div>
                   <div class="collapsible-body row">
                     <div class="col s12" style="margin:0;padding:0;">
