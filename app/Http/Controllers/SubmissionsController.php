@@ -218,7 +218,7 @@ class SubmissionsController extends Controller
 
         return redirect('dashboard');
     }
-    
+
     public function setMovieStatus(Request $request) {
         try {
             $validator = Validator::make($request->all(), [
@@ -238,6 +238,32 @@ class SubmissionsController extends Controller
                     'movie_submitted' => $request->input('movie_status'),
                 ]);
             return JSONResponse::response(200, "Movie status set successfully");
+
+        } catch (Exception $e) {
+            Log::error($e->getMessage()." ".$e->getLine());
+            return JSONResponse::response(500, $e->getMessage()." ".$e->getLine());
+        }
+    }
+
+    public function setPaymentStatus(Request $request) {
+        try {
+            $validator = Validator::make($request->all(), [
+                'user_id'        => 'required|string',
+                'payment_status' => 'required|string'
+            ]);
+
+            if($validator->fails()) {
+                $message = "Invalid parameters";
+                return JSONResponse::response(400, $message);
+            }
+
+            $user_id = $request->input('user_id');
+
+            Submission::where('user_id','=',$user_id)
+                ->update([
+                    'payment_submitted' => $request->input('payment_status'),
+                ]);
+            return JSONResponse::response(200, "Payment status set successfully");
 
         } catch (Exception $e) {
             Log::error($e->getMessage()." ".$e->getLine());

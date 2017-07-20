@@ -51,21 +51,16 @@
                         </p>
                     </div>
                     @endif
-                    @if($submission->payment_submitted)
                     <div class="col s3 center-align">
                         <p>
-                          <input type="checkbox" id="payment" checked="checked" disabled="disabled" />
-                          <label for="payment">Payment</label>
+                          <input type="checkbox" id="payment_{{$submission->user_id}}" onchange="setPaymentStatus({{$submission->user_id}});return false;"
+                        @if($submission->payment_submitted)
+                          checked="checked"
+                        @endif
+                            />
+                          <label for="payment_{{$submission->user_id}}">Payment</label>
                         </p>
                     </div>
-                    @else
-                    <div class="col s3 center-align">
-                        <p>
-                          <input type="checkbox" id="payment" disabled="disabled" />
-                          <label for="payment">Payment</label>
-                        </p>
-                    </div>
-                    @endif
                     <div class="col s3 center-align">
                         <p>
                           <input type="checkbox" id="movie_{{$submission->user_id}}" onchange="setMovieStatus({{$submission->user_id}});return false;"

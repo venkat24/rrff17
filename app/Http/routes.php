@@ -60,6 +60,7 @@ Route::group(['middleware' => 'setResponseHeaders'], function() {
 
 Route::group(['middleware' => ['checkSessionAdminJSON','setResponseHeaders']], function() {
     Route::post('/api/setmoviestatus','SubmissionsController@setMovieStatus');
+    Route::post('/api/setpaymentstatus','SubmissionsController@setPaymentStatus');
 });
 
 Route::group(['middleware' => ['checkSessionJSON','setResponseHeaders']], function() {
