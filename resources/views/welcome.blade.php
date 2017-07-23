@@ -105,15 +105,15 @@
                             <h3 class="animate-intro" style="color:white; margin-top: -15px;font-size: 1.5em;text-shadow:2px 2px 0px red;">20th August</h3>
                             <h4 class="animate-intro" style="color:white; margin-top: -15px;text-shadow:2px 2px 0px #C451B4;">LV Prasad Film and TV Academy, Chennai</h4>
                             <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Prize Money <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 1,00,000/-</div></h3>
-                            <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Registration fee <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 600/-</div></h3>
+                            <h5 class="animate-intro" style="color:white; font-size: 1.0em;">Registration fee <div class="animated infinite pulse" style="text-shadow:2px 2px 0px red;">&#8377; 700/-</div></h3>
 
 				  			<div class="more animate-intro" style="margin-top: -0.3em;">
-							  <div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>
+							  <!--<div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>-->
 				  				<a class="button stroke" href="/register">
                                     Register Now
 				  				</a>
 				  			</div>
-				  			<h3 class="animate-intro" style="color:white; font-size: 0.8em; margin-top: -0.2em">Early Bird Deadline - July 15th</h3>
+				  			<!--<h3 class="animate-intro" style="color:white; font-size: 0.8em; margin-top: -0.2em">Early Bird Deadline - July 15th</h3>-->
 			  		</div> <!-- end col-twelve -->
 		   	</div> <!-- end row -->
 		   </div> <!-- end home-content-tablecell -->
