@@ -318,6 +318,18 @@
 
                <li>
                	<div class="testimonial-author">
+                    	<img src="images/avatars/user-08.jpg" alt="Author image">
+                    	<div class="author-info">
+                    		Vignesh Shivan
+                    		<span>Director</span>
+							<br>
+							<p>Vignesh Shivan is a Tamil film director, actor and lyric writer. He has directed blockbuster movies like <em>Podaa Podi</em>, <em>Naanum Rowdydhaan</em>,  <em>Thaanaa Serndha Koottam</em> and has associated with many other festure films as an actor, lyricist and writer. </p>
+                    	</div>
+                  </div>                                         
+               </li> <!-- end slide -->
+
+               <li>
+               	<div class="testimonial-author">
                     	<div class="author-info">
 							<img src="images/reel.png" width="100px" class="animate-reel reel-sub">
 							<p>We shall reveal more members of our panel shortly. Stay tuned!</p>
