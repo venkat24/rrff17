@@ -110,8 +110,9 @@
 				  			<div class="more animate-intro" style="margin-top: -0.3em;">
 							  <!--<div class="early-bird-prompt animated infinite tada">Early Bird Offer!</div>-->
 				  				<a class="button stroke" href="/register">
-                                    Register Now
+                                    Submit Film
 				  				</a>
+								<button  class="button stroke" onclick="popup('rolling-reels-film-festival-404140');" class="tsbutton">Register for Workshop</button><noscript id="tsNoJsMsg">Javascript on your browser is not enabled.</noscript><script src="//www.townscript.com/popup-widget/townscript-widget.nocache.js" type="text/javascript"></script>
 				  			</div>
 				  			<!--<h3 class="animate-intro" style="color:white; font-size: 0.8em; margin-top: -0.2em">Early Bird Deadline - July 15th</h3>-->
 			  		</div> <!-- end col-twelve -->
