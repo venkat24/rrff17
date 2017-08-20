@@ -159,7 +159,7 @@
    		<h3>Event Location</h3>
    		<h1></h1>
    			
-		  <iframe style="width: 80%; height: 300px" src="https://www.google.com/maps/embed/v1/search?q=L.V.Prasad%20Film%20%26%20TV%20Academy%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India
+		  <iframe style="width: 80%; height: 300px" src="https://www.google.com/maps/embed/v1/place?q=13.055244,80.204562
     		      &zoom=17
     		      &key=AIzaSyCAQUr8ZIP6il4w3TdvH77a4glOpuz9r3I">
     		  </iframe>
